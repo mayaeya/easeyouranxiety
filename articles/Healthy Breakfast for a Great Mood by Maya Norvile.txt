@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="../articles.html">Articles</a> | 
+        <a href="../stories.html">Stories</a> |
+        <a href="../team.html">Our Team</a> |
+        <a href="../book.html">Books</a>
+    </nav>
+
+    <div class="container">
+        <h1>Articles</h1>
+
+<div class="blog-post">
+    <h2>"Healthy Breakfast for a Great Mood" by Maya Norvile</h2>
+    <p>Skipping a proper breakfast can lead to hunger, irritability, and fatigue throughout the day. Starting your day with the right foods is key to feeling energized and positive.<p>
+<p>Your breakfast should be quick to prepare but still packed with nutrients. Ideally, it should provide 25-30% of your daily calorie intake, a third of your protein, half of your vitamins, two-thirds of your carbohydrates, and less than one-fifth of your fats. A well-balanced morning meal gives your body the fuel it needs to function at its best.<p>
+<p><strong>Nutrient-Packed Breakfast Ideas</strong><p>
+<p>One of the best options is a warm bowl of whole grain porridge or granola, rich in healthy carbohydrates and nutrients that support overall well-being. Oats, for example, help regulate blood sugar levels, which can be particularly beneficial for people with anxiety, as stable energy can reduce mood swings.<p>
+<p><strong>Honey</strong> is another great addition to breakfast. It not only provides physical energy but also sharpens your mind, helps with emotional clarity, and supports the blood and nervous systems. The natural sweetness can lift your mood, offering a little boost when you’re feeling low or anxious.<p>
+<p><strong>Fresh fruit</strong> is also an excellent choice, packed with vitamins, fiber, and antioxidants that nourish your body and mind. Fruits like bananas and berries are known to improve serotonin levels, a "happy chemical" that helps manage mood and reduce anxiety.<p>
+<p>For those who enjoy bread in the morning, <strong>whole grain bread</strong> or similar baked goods can keep you feeling full for longer, give your muscles energy, and support brain function. The fiber in whole grains also promotes good gut health, which is important since gut health is linked to mood regulation and mental well-being. A healthy digestive system can even help clear toxins from your body faster, reducing physical stress.<p>
+<p><strong>Morning Beverages for a Calm and Focused Mind</strong><p>
+<p>When it comes to drinks, both coffee and tea can be great morning choices. Coffee, in moderation, can boost mood and focus, but if you're prone to anxiety, it might be best to limit it, as caffeine can sometimes heighten feelings of stress. On the other hand, <strong>green tea</strong> is a wonderful alternative. It not only boosts metabolism but also helps flush out bad cholesterol, strengthens blood vessels, and contains L-theanine, an amino acid that promotes relaxation and reduces stress without making you drowsy.<p>
+<p><strong>Small Changes for Big Impact</strong><p>
+<p>If you struggle with stress, breakfast can be an easy way to start the day right. Including these mood-boosting ingredients in your morning routine can help you feel more in control and grounded. Remember, even if you're not hungry in the morning, having a small, nutritious meal can make a big difference in your overall mood and energy levels.<p>
+<p>Taking care of your body in the morning is like a gentle act of self-care, setting a positive tone for the rest of the day.<p>
+
+</div>
+</body>
+</html>

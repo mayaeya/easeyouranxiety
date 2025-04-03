@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#E6E6FA;
+            text-align: center;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        /* Search Bar Styling */
+        .search-box {
+            position: relative;
+            width: 300px;
+            margin: 0 auto 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        .search-box .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+            font-size: 18px;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="articles.html">Articles</a> | 
+	<a href="stories.html">Stories</a>
+        <a href="team.html">Our Team</a> |
+        <a href="book.html">Books</a>
+
+    </nav>
+
+    <div class="container">
+        <h1>Stories</h1>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="article-list" id="articleList">
+	<a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html">"Finding Freedom in the Power of Voice: A Journey from Silence to Strength" by Hema Kusk (Žiedūnė)</a>
+	<a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html">"Fighting Depression Alone: Part 1 - How It Feels" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 2 - A Moment of Understanding by Maya Norvile.html">"Fighting Depression Alone: Part 2 - A Moment of Understanding" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 3 - Nightmares by Maya Norvile.html">"Fighting Depression Alone: Part 3 - Nightmares" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 4 - Fear by Maya norvile.html">"Fighting Depression Alone: Part 4 - Fear" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 5 - Acceptance by Maya norvile.html">"Fighting Depression Alone: Part 5 - Acceptance" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 6 - Death and the Unyielding Ache of Living by Maya norvile.html">"Fighting Depression Alone: Part 6 - Death and the Unyielding Ache of Living" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 7 - Navigating Airports by Maya norvile.html">"Fighting Depression Alone: Part 7 - Navigating Airports" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 8 - Trapped in the Dark by Maya norvile.html">"Fighting Depression Alone: Part 8 - Trapped in the Dark" by Maya Norvile</a>
+	<a href="stories/Fighting Depression Alone Part 9 - A Drive to Disaster by Maya norvile.html">"Fighting Depression Alone: Part 9 - A Drive to Disaster" by Maya Norvile</a>
+	<a href="stories/Lonely Christmas by Maya norvile.html">"Lonely Christmas" by Maya Norvile</a>
+
+
+</div>
+</body>
+</html>

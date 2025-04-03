@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#E6E6FA;
+            text-align: center;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #FFF5F3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        /* Search Bar Styling */
+        .search-box {
+            position: relative;
+            width: 300px;
+            margin: 0 auto 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        .search-box .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+            font-size: 18px;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="articles.html">Articles</a> | 
+	<a href="stories.html">Stories</a>
+        <a href="team.html">Our Team</a> |
+        <a href="book.html">Books</a>
+
+    </nav>
+
+    <div class="container">
+        <h1>Articles</h1>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="article-list" id="articleList">
+	<a href="articles/Managing Panic Attacks Breathing Exercises by Dovilė Bagdonaitė.html">"Managing Panic Attacks: Breathing Exercises" by Dovilė Bagdonaitė</a>
+		<a href="articles/Building Resilience by Maya Norvile.html">"Building Resilience" by Maya Norvile</a>
+		<a href="articles/Quick self-help by Maya Norvile.html">"Quick self-help" by Maya Norvile</a>
+		<a href="articles/Work-Life Balance by Maya Norvile.html">"Work-Life Balance" by Maya Norvile</a>
+		<a href="articles/How to Make Your Living Space Cozy and Relaxing with Minimal Investment by Maya Norvile.html">"How to Make Your Living Space Cozy and Relaxing with Minimal Investment" by Maya Norvile</a>
+		<a href="articles/Unveiling Hidden Depression Recognizing the Subtle Signs by Maya Norvile.html">"Unveiling Hidden Depression: Recognizing the Subtle Signs" by Maya Norvile</a>
+		<a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html">"Rape: Understanding and Recognizing the Unseen Forms" by Maya Norvile</a>
+		<a href="articles/Managing Panic Attacks Grounding Techniques by Dovilė Bagdonaitė.html">"Managing Panic Attacks: Grounding Techniques" by Dovilė Bagdonaitė</a>
+		<a href="articles/Unseen Forms of Abuse by Maya Norvile.html">"Unseen Forms of Abuse" by Maya Norvile</a>
+		<a href="articles/Breathing Techniques How They Help with Stress and Anxiety by Dovilė Bagdonaitė.html">"Breathing Techniques: How They Help with Stress and Anxiety" by Dovilė Bagdonaitė</a>
+		<a href="articles/Stress Part 1 - Causes Effects and Management Strategies by Maya Norvile.html">"Stress: Part 1 - Causes, Effects, and Management Strategies" by Maya Norvile</a>
+		<a href="articles/Stress Part 2 - How Stress is Affecting Communication by Maya Norvile.html">"Stress: Part 2 - How Stress is Affecting Communication" by Maya Norvile</a>
+		<a href="articles/The Power of Prayer by Maya Norvile & Hema Kusk (Žiedūnė).html">"The Power of Prayer" by Maya Norvile & Hema Kusk (Žiedūnė)</a>
+		<a href="articles/About Emotions A Guide to Emotional Well-Being by Maya Norvile.html">"About Emotions: A Guide to Emotional Well-Being" by Maya Norvile</a>
+		<a href="articles/About Anger How to Understand and Manage it by Maya Norvile.html">"About Anger: How to Understand and Manage it" by Maya Norvile</a>
+		<a href="articles/Confrontatione by Maya Norvile Hema Kusk (Žiedūnė) Dovilė Bagdonaitė.html">"Confrontation" by Maya Norvile Hema Kusk (Žiedūnė) Dovilė Bagdonaitė</a>
+		<a href="articles/The Choice to Forgive: A Path to Healing by Maya Norvile.html">"The Choice to Forgive: A Path to Healing" by Maya Norvile</a>
+		<a href="articles/The Harmful Legacy of Violence Why Parents Should Never Use Physical Punishment on Their Children by Hema Kusk (Žiedūnė).html">"The Harmful Legacy of Violence: Why Parents Should Never Use Physical Punishment on Their Children" by Hema Kusk (Žiedūnė)</a>
+		<a href="articles/Nicotine Addiction & How to Quit by Maya Norvile.html">"Nicotine Addiction & How to Quit" by Maya Norvile</a>
+		<a href="articles/Problem-Solving by Maya Norvile.html">"Problem-Solving" by Maya Norvile</a>
+		<a href="articles/Depression More Than Just Feeling Sad by Maya Norvile.html">"Depression: More Than Just Feeling Sad" by Maya Norvile</a>
+		<a href="articles/Chronic Withdrawal Syndrome Understanding and Coping with Symptoms from Drug and Alcohol Withdrawal by Maya Norvile.html">"Chronic Withdrawal Syndrome: Understanding and Coping with Symptoms from Drug and Alcohol Withdrawal" by Maya Norvile</a>
+		<a href="articles/Drug Cravings and Ways to Cope with Them by Maya Norvile.html">"Drug Cravings and Ways to Cope with Them" by Maya Norvile</a>
+		<a href="articles/How to Overcome Persistent Thoughts About Drugs by Maya Norvile.html">"How to Overcome Persistent Thoughts About Drugs" by Maya Norvile</a>
+		<a href="articles/Relapse Syndrome by Maya Norvile.html">"Relapse Syndrome" by Maya Norvile</a>
+		<a href="articles/How to Handle Dangerous Situations When Overcoming Addiction by Maya Norvile.html">"How to Handle Dangerous Situations When Overcoming Addiction" by Maya Norvile</a>
+		<a href="articles/Stress Part 3 - How Stress Affects You Physically by Maya Norvile.html">"Stress: Part 3 - How Stress Affects You Physically" by Maya Norvile</a>
+		<a href="articles/Stress Part 4 - How to Avoid Conflict When You Are Stressed by Maya Norvile.html">"Stress: Part 4 - How to Avoid Conflict When You Are Stressed" by Maya Norvile</a>
+		<a href="articles/How to Find Happiness by Maya Norvile.html">"How to Find Happiness" by Maya Norvile</a>
+		<a href="articles/Relaxation Learn from Ancestors and Children by Maya Norvile.html">"Relaxation: Learn from Ancestors and Children" by Maya Norvile</a>
+		<a href="articles/Stress Part 5 - How to Calm Yourself After Experiencing Stress by Maya Norvile.html">"Stress: Part 5 - How to Calm Yourself After Experiencing Stress" by Maya Norvile</a>
+		<a href="articles/Healthy Breakfast for a Great Mood by Maya Norvile.html">"Healthy Breakfast for a Great Mood" by Maya Norvile</a>
+		<a href="articles/Finding Fulfillment without Shopping by Maya Norvile.html">"Finding Fulfillment without Shopping" by Maya Norvile</a>
+		<a href="articles/The Benefits of Rest by the Sea by Maya Norvile.html">"The Benefits of Rest by the Sea" by Maya Norvile</a>
+		<a href="articles/For a Better Mood by Maya Norvile.html">"For a Better Mood" by Maya Norvile</a>
+		<a href="articles/Why It’s Worth Having a Pet by Maya Norvile.html">"Why It’s Worth Having a Pet" by Maya Norvile</a>
+		<a href="articles/Enjoy Every Moment of Life by Maya Norvile.html">"Enjoy Every Moment of Life" by Maya Norvile</a>
+		<a href="articles/Overcoming Harmful Habits and Behaviors by Maya Norvile.html">"Overcoming Harmful Habits and Behaviors" by Maya Norvile</a>
+		<a href="articles/Choose Friends Wisely by Maya Norvile.html">"Choose Friends Wisely" by Maya Norvile</a>
+
+
+</div>
+</body>
+</html>

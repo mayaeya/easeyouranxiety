@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="../articles.html">Articles</a> | 
+        <a href="../stories.html">Stories</a> |
+        <a href="../team.html">Our Team</a> |
+        <a href="../book.html">Books</a>
+    </nav>
+
+    <div class="container">
+        <h1>Stories</h1>
+
+<div class="blog-post">
+    <h2>"Fighting Depression Alone: Part 8 - Trapped in the Dark" by Maya Norvile</h2>
+    <p>I’m so tired. Tired of waking up each day to the same suffocating routine, the same suffocating pills. I don’t even know who I am without them anymore. They’ve become a part of me, embedded into my flesh, poisoning my mind. I had to stop. I needed to feel human again. I didn’t take my pills tonight. And now… I don’t know if that was the biggest mistake of my life.<p>
+<p>The night is swallowing me whole. The darkness isn’t just in the room—it’s in my head, spreading like ink in water. My heart is pounding, each beat echoing through my chest like a war drum. I can feel it in my throat, like it’s trying to escape. The air is thick, too thick, and every breath feels like dragging a knife across my lungs. The walls are closing in. I swear I can hear them creaking, inching closer, ready to crush me.<p>
+<p>It’s getting harder to breathe. I can’t focus on anything except the overwhelming sense that something is wrong, something is here. The shadows are shifting, moving, creeping toward me. I know there’s no one else in the room, but… why do I feel like someone is here with me? My skin is crawling. I can feel fingers brushing through my hair. But no one’s here. No one’s here!<p>
+<p>I’m losing it. I’m unraveling, piece by piece. The fear is so real, so intense, it’s like I’m drowning in it. My mind is racing, screaming at me to take the pills, just take them, and make it all stop. But I can’t. I can’t go back. But… I’m so scared. I’m so damn scared.<p>
+<p>The room is closing in, the shadows are closing in, everything is closing in. I feel like I’m being suffocated by my own mind. I just want it to stop. I just want everything to stop. But there’s no escape, no way out. Just me, and this dark, suffocating terror.<p>
+</div>
+</body>
+</html>

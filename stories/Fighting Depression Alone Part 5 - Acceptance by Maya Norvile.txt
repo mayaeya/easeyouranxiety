@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="../articles.html">Articles</a> | 
+        <a href="../stories.html">Stories</a> |
+        <a href="../team.html">Our Team</a> |
+        <a href="../book.html">Books</a>
+    </nav>
+
+    <div class="container">
+        <h1>Stories</h1>
+
+<div class="blog-post">
+    <h2>"Fighting Depression Alone: Part 5 - Acceptance" by Maya Norvile</h2>
+    <p>I can't remember how many months passed until I was finally able to accept that I was fighting a battle with that horrible, suffocating feeling. There were days when getting out of bed felt like climbing a mountain. Nights when sleep refused to come, leaving me alone with my racing thoughts and crushing sadness. Moments when I questioned if I would ever feel okay again. I felt hopeless, so sad, so exhausted. I was sitting on my bed early that morning, needing to shower, dress, and drive to the office, but I couldn't move. It was the day I just couldn't handle it anymore. My chest felt like it was caving in, and every breath was a struggle. The weight of everything seemed to crush me, and all I could do was sit there, paralyzed by despair. There were tears, so many tears. I cried in the shower, cried in my car, cried in bed at night. The pain was relentless, a constant companion that refused to let go. It was during these moments of utter despair that I realized I had to accept my situation. I had to acknowledge the depths of my depression and understand that asking for help wasn't a sign of weakness, but a necessary step towards healing. The realization that I couldn't live like this forever settled in like a heavy fog.<p>
+<p>The night before my moment of acceptance was sleepless, despite the medication. The day prior had been a nightmare. My boss had bullied me at work, laughing at my anxiety and calling it an excuse for lazy people. She truly believed that if you were physically healthy, you had no real problems. On top of that, my ex had blackmailed me again, twisting the knife deeper into wounds that never seemed to heal.<p>
+<p>I called my GP and asked for a sick note, my voice trembling with fear and desperation. I asked for help. I was referred to a therapist.<p>
+<p>The acceptance didn't come easily or quickly. It was a gradual process, one that required patience and a lot of self-compassion. I had to forgive myself for the days I couldn't function, for the moments I felt like giving up. And slowly, very slowly, I began to see a glimmer of light in the darkness.<p>
+<p>The journey was far from over, but acceptance was the first real step. It allowed me to start fighting back, to reclaim small pieces of my life. And though the road ahead was still long and uncertain, I knew I wasn't alone anymore.<p>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Maya World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .article-list {
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+        }
+        .article-list a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="../articles.html">Articles</a> | 
+        <a href="../stories.html">Stories</a> |
+        <a href="../team.html">Our Team</a> |
+        <a href="../book.html">Books</a>
+    </nav>
+
+    <div class="container">
+        <h1>Articles</h1>
+
+
+<div class="blog-post">
+    <h2>"Managing Panic Attacks: Breathing Exercises" by Dovilė Bagdonaitė</h2>
+    <p>Panic attacks can be overwhelming and frightening, but with the right techniques, you can manage them effectively. One of the most powerful tools at your disposal is controlled breathing. In this article, we will explore how to notice the signs of a panic attack, breathing exercises to help calm you.<p>
+<p><strong>Recognizing the Signs of a Panic Attack</strong><p>
+<p>Panic attacks can happen suddenly and without warning. However, there are often signs that indicate one might be coming:<p>
+<br>Rapid Heartbeat: Your heart may start to race or feel like it's pounding in your chest.<br>
+<br>Shortness of Breath: You might feel like you can't catch your breath.<br>
+<br>Sweating: You may start sweating excessively, even if you are not hot.<br>
+<br>Trembling or Shaking: Your body might tremble or shake uncontrollably.<br>
+<br>Chest Pain: You might experience discomfort or pain in your chest.<br>
+<br>Nausea: You may feel nauseous or have an upset stomach.<br>
+<br>Dizziness: You might feel lightheaded or dizzy.<br>
+<br>Feelings of Unreality: You might feel detached from reality or experience a sense of impending doom.<p>
+<p><strong>Breathing Exercises to Calm a Panic Attack</strong><p>
+<p>When you notice the signs of a panic attack, practicing controlled breathing can help reduce the symptoms and bring you back to a state of calm. Here are some effective breathing exercises:<p>
+<p><strong>1. Diaphragmatic Breathing (Belly Breathing)</strong><p>
+<br>Find a Comfortable Position: Sit or lie down in a comfortable position.<br>
+<br>Place Your Hands: Place one hand on your chest and the other on your belly.<br>
+<br>Inhale Slowly: Take a slow, deep breath in through your nose. Focus on expanding your belly rather than your chest. Your hand on your belly should rise while the hand on your chest remains still.<br>
+<br>Exhale Slowly: Exhale slowly through your mouth, letting the air escape naturally. Your belly should fall as you exhale.<br>
+<br>Repeat: Continue this slow, deep breathing for several minutes until you feel calmer.<p>
+<p><strong>2. 4-7-8 Breathing</strong><p>
+<br>Inhale: Breathe in quietly through your nose for a count of 4.<br>
+<br>Hold: Hold your breath for a count of 7.<br>
+<br>Exhale: Exhale completely through your mouth, making a whooshing sound, for a count of 8.<br>
+<br>Repeat: Repeat this cycle for 4 breaths initially, and gradually increase as needed.<p>
+<p><strong>3. Box Breathing (Square Breathing)</strong><p>
+<br>Inhale: Breathe in slowly through your nose for a count of 4.<br>
+<br>Hold: Hold your breath for a count of 4.<br>
+<br>Exhale: Exhale slowly through your mouth for a count of 4.<br>
+<br>Hold: Hold your breath again for a count of 4.<br>
+<br>Repeat: Continue this pattern for several minutes.<p>
+<p>Panic attacks can be challenging, but with the right tools and techniques, you can manage them effectively. Recognizing the signs of an impending attack, practicing controlled breathing can help you regain control. Remember, you are not alone, and with practice, you can reduce the impact of panic attacks on your life.</p>
+</div>
