@@ -14,20 +14,36 @@
             text-align: center;
         }
         nav {
-            background-color:navy;
-            padding: 10px;
-		    width: 100vw; /* Full width */
+    background-color: navy;
+    padding: 10px;
+    width: 100vw;
     box-sizing: border-box;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Reduce space between links */
+    flex-wrap: nowrap; /* Prevents links from jumping to a new line */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 14px; /* Smaller text */
+    white-space: nowrap; /* Prevents words from breaking */
+}
+
+/* Mobile Fix */
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap; /* Only allow wrapping if absolutely needed */
+        font-size: 12px; /* Even smaller font for small screens */
+    }
+    
+    nav a {
+        padding: 5px 8px; /* Even smaller padding */
+    }
+}
+
         .container {
             width: 80%;
             margin: auto;
