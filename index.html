@@ -3,138 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles - Maya World</title>
-</head>
-<body> 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team - Maya World</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-    font-size: 14px; 
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        nav {
-            background-color:navy;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .team-member {
-            margin-bottom: 40px;
-            text-align: left;
-        }
-        h1 {
-            color: #333;
-        }
-        h2 {
-            color: #555;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation Menu -->
-<nav>
-    <a href="index.html">Home</a> | 
-    <a href="articles.html">Articles</a> |
-	<a href="stories.html">Stories</a> 
-    <a href="team.html">Our Team</a>
-<a href="book.html">Books</a>
-</nav>
- 
-
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maya World</title>
     <style>
-        body {
+        /* Prevent horizontal scrolling */
+        body, html {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background-image: url('images/home.jpg'); /* Fixed this */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        header {
-            background-color: pink;
-            color: purple;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        .blog-post {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>EMPOWER YOUR MIND TODAY</h1>
-        <h1>Discover advice on stress, anxiety, and depression.</h1>
-    </header>
-
-<div
-    </div>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maya World</title>
-    <style>
-        body {
+            width: 100%;
+            overflow-x: hidden;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
         }
 
@@ -142,19 +19,22 @@
             font-size: 24px;
             color: pink;
             text-align: left;
-            width: 100%;
             padding-left: 30px;
+            margin-bottom: 10px;
         }
 
         .most-read-container {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding-left: 20px;
+            padding: 0 20px; /* Prevents overflow */
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .article-box {
-            width: 400px; 
+            width: 100%; /* Makes sure it adapts to smaller screens */
+            max-width: 400px; 
             height: 120px; 
             background: #FFF5F3;
             display: flex;
@@ -162,6 +42,7 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto; /* Centers the box */
         }
 
         .article-image {
@@ -182,38 +63,25 @@
             margin: 0;
         }
 
-        .article-text p {
-            font-size: 12px;
-            margin: 5px 0;
-            color: #555;
-        }
-
         .article-text a {
-            color: navy;
-            text-decoration: none;
-
+            display: inline-block;
+            background-color: pink;
+            color: black;
+            padding: 8px 12px;
+            border-radius: 5px;
             font-size: 12px;
-
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
         }
-.read-more-btn {
-    display: inline-block;
-    background-color: pink;
-    color: black;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 12px;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.read-more-btn:hover {
-    background-color: hotpink;
-}
+        .article-text a:hover {
+            background-color: hotpink;
+        }
 
     </style>
 </head>
 <body>
-
 
     <h1 class="most-popular-title">Readers Most Favourite</h1>
 
@@ -221,8 +89,8 @@
         <div class="article-box">
             <img src="images/freedom.jpg" alt="Article 1" class="article-image">
             <div class="article-text">
-                <h2>Finding Freedom in the Power of Voice:<br><br>A Journey from Silence to Strength</h2>
-                <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html"class="read-more-btn">Read More</a>
+                <h2>Finding Freedom in the Power of Voice:<br>A Journey from Silence to Strength</h2>
+                <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html">Read More</a>
             </div>
         </div>
 
@@ -230,26 +98,25 @@
             <img src="images/prayer.jpg" alt="Article 2" class="article-image">
             <div class="article-text">
                 <h2>The Power of Prayer</h2>
-                <a href="articles/The Power of Prayer by Maya Norvile & Hema Kusk (Žiedūnė).html"class="read-more-btn">Read More</a>
+                <a href="articles/The Power of Prayer by Maya Norvile & Hema Kusk (Žiedūnė).html">Read More</a>
             </div>
         </div>
 
         <div class="article-box">
             <img src="images/depression.jpg" alt="Article 3" class="article-image">
             <div class="article-text">
-                <h2>Fighting Depression Alone: Part 1 -<br><br>How It Feels</h2>
-                <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html"class="read-more-btn">Read More</a>
+                <h2>Fighting Depression Alone: Part 1 - How It Feels</h2>
+                <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html">Read More</a>
             </div>
         </div>
-<div class="article-box">
-            <img src="images/rape.jpg" alt="Article 3" class="article-image">
+
+        <div class="article-box">
+            <img src="images/rape.jpg" alt="Article 4" class="article-image">
             <div class="article-text">
-                <h2>Rape: Understanding and Recognizing<br><br>the Unseen Forms</h2>
-                <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html"class="read-more-btn">Read More</a>
-
+                <h2>Rape: Understanding and Recognizing the Unseen Forms</h2>
+                <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html">Read More</a>
             </div>
         </div>
-
     </div>
 
 </body>
