@@ -12,19 +12,23 @@
             background-color:#E6E6FA;
             text-align: center;
         }
+
         nav {
             background-color: navy;
             padding: 10px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
         }
+
         nav a:hover {
             background-color: #555;
         }
+
         .container {
             width: 80%;
             margin: auto;
@@ -34,12 +38,14 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
-        /* Search Bar Styling */
+
+        /* Search Box Styling */
         .search-box {
             position: relative;
-            width: 300px;
+            width: 250px;
             margin: 0 auto 20px;
         }
+
         .search-box input {
             width: 100%;
             padding: 10px 35px 10px 10px;
@@ -47,6 +53,7 @@
             border-radius: 20px;
             font-size: 16px;
         }
+
         .search-box .search-icon {
             position: absolute;
             right: 10px;
@@ -54,12 +61,15 @@
             transform: translateY(-50%);
             color: gray;
             font-size: 18px;
+            pointer-events: none;
         }
+
         .article-list {
             text-align: left;
             max-width: 500px;
             margin: auto;
         }
+
         .article-list a {
             display: block;
             padding: 10px;
@@ -70,6 +80,7 @@
             text-decoration: none;
             color: #333;
         }
+
         .article-list a:hover {
             background-color: #ddd;
         }
@@ -81,10 +92,9 @@
     <nav>
         <a href="index.html">Home</a> | 
         <a href="articles.html">Articles</a> | 
-	<a href="stories.html">Stories</a>
+        <a href="stories.html">Stories</a> |
         <a href="team.html">Our Team</a> |
         <a href="book.html">Books</a>
-
     </nav>
 
     <div class="container">
@@ -93,7 +103,7 @@
         <!-- Search Box -->
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
-            <span>🔍</span>
+            <span class="search-icon">🔍</span>
         </div>
 
         <div class="article-list" id="articleList">
