@@ -71,20 +71,15 @@ nav a {
             font-size: 16px;
         }
 
-/* Search Box Styling */
-.search-box {
-    position: relative;
-    width: 90%;  /* Make it take most of the screen width */
-    max-width: 300px; /* But not too big */
-    margin: 10px auto; /* Center it */
-}
-
-.search-box input {
-    width: 100%; /* Make it fully responsive */
-    padding: 10px 35px 10px 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
+ .search-box .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+            font-size: 18px;
+            pointer-events: none;
+        }
 }
 
 /* Mobile adjustments */
