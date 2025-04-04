@@ -3,113 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Maya World</title>
     <style>
-        /* General reset */
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            height: 100vh;
+            background-image: url('images/home.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        /* Navigation */
-        .navbar {
-            background-color: navy;
-            color: white;
+        header {
+            background-color: pink;
+            color: purple;
             text-align: center;
+            padding: 1em 0;
+            width: 100vw;
+            box-sizing: border-box;
+            margin-top: 60px; /* Added margin to prevent overlap with navigation */
+        }
+
+        .blog-post {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: navy;
             padding: 10px;
-            width: 100%;
+            width: 100vw;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: nowrap;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1000;
         }
 
-        /* Main banner */
-        .banner {
-            text-align: center;
-            background-color: pink;
-            padding: 50px 10px;
-            margin-top: 60px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            white-space: nowrap;
         }
 
-        /* Readers Most Favourite Section */
-        .readers-favourite-section {
-            position: relative;
-            background-image: url('your-image-url.jpg'); /* Replace with actual image URL */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 100px 10px;
+        /* Mobile Fix */
+        @media (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                font-size: 12px;
+            }
+            
+            nav a {
+                padding: 5px 8px;
+            }
+            
+            body {
+                background-size: 100% 100%;
+            }
+        }
+
+        .most-popular-title {
+            font-size: 24px;
+            color: pink;
+            text-align: left;
             width: 100%;
-            overflow: hidden;
+            padding-left: 30px;
+            margin-top: 80px; /* Prevent overlap with fixed nav */
         }
 
-        /* Content Box */
-        .readers-favourite-content {
-            position: relative;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            margin: 0 auto;
+        .most-read-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 30px; /* Align to the left */
+            align-items: flex-start; /* Adjust alignment */
         }
 
-        /* Book Boxes */
-        .book-box {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
+        .article-box {
+            width: 90%; 
+            max-width: 400px;
+            background: #FFF5F3;
             display: flex;
             align-items: center;
-            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .book-box img {
-            width: 50px;
-            border-radius: 5px;
+        .article-image {
+            width: 70px;
+            height: 90px;
+            border-radius: 15%;
+            object-fit: cover;
+            margin-right: 15px;
         }
 
-        .book-box button {
+        .article-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .article-text h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .article-text p {
+            font-size: 12px;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .article-text a {
+            color: navy;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
             background-color: pink;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
+            color: black;
+            padding: 8px 12px;
             border-radius: 5px;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        /* Responsive Fix */
-        @media (max-width: 768px) {
-            .readers-favourite-section {
-                background-size: cover;
-                background-position: center;
-            }
+        .read-more-btn:hover {
+            background-color: hotpink;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="articles.html">Articles</a> |
+        <a href="stories.html">Stories</a> 
+        <a href="team.html">Our Team</a>
+        <a href="book.html">Books</a>
+    </nav>
 
-    <div class="navbar">
-        Home | Articles | Stories | Our Team | Books
-    </div>
-
-    <div class="banner">
+    <header>
         <h1>EMPOWER YOUR MIND TODAY</h1>
-        <p>Discover advice on stress, anxiety, and depression.</p>
-    </div>
+        <h1>Discover advice on stress, anxiety, and depression.</h1>
+    </header>
 
-    <div class="readers-favourite-section">
-        <div class="readers-favourite-content">
-            <h2>Readers Most Favourite</h2>
-            <div class="book-box">
-                <img src="book1.jpg" alt="Book 1">
-                <p>Finding Freedom in the Power of Voice: A Journey from Silence to Strength</p>
-                <button>Read More</button>
+    <h1 class="most-popular-title">Readers Most Favourite</h1>
+
+    <div class="most-read-container">
+        <div class="article-box">
+            <img src="images/freedom.jpg" alt="Article 1" class="article-image">
+            <div class="article-text">
+                <h2>Finding Freedom in the Power of Voice:<br><br>A Journey from Silence to Strength</h2>
+                <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
             </div>
         </div>
 
@@ -126,6 +190,14 @@
             <div class="article-text">
                 <h2>Fighting Depression Alone: Part 1 -<br><br>How It Feels</h2>
                 <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="images/rape.jpg" alt="Article 4" class="article-image">
+            <div class="article-text">
+                <h2>Rape: Understanding and Recognizing<br><br>the Unseen Forms</h2>
+                <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
             </div>
         </div>
     </div>
