@@ -13,8 +13,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             overflow-x: hidden;
-            font-family: Arial, sans-serif;
         }
 
         header {
@@ -26,6 +26,17 @@
             box-sizing: border-box;
         }
 
+        .blog-post {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        /* Navigation Bar */
         nav {
             background-color: navy;
             padding: 10px;
@@ -34,7 +45,11 @@
             display: flex;
             justify-content: center;
             gap: 5px;
-            flex-wrap: wrap; /* Allows wrapping on small screens */
+            flex-wrap: nowrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -45,39 +60,42 @@
             white-space: nowrap;
         }
 
-        /* Responsive Navigation */
+        /* Mobile Fix */
         @media (max-width: 600px) {
             nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                display: block;
-                padding: 8px 0;
-                text-align: center;
+                flex-wrap: wrap;
                 font-size: 12px;
+            }
+            
+            nav a {
+                padding: 5px 8px;
+            }
+            
+            body {
+                background-size: 100% 100%;
             }
         }
 
         .most-popular-title {
             font-size: 24px;
             color: pink;
-            text-align: center;
+            text-align: left;
             width: 100%;
-            padding-left: 0;
+            padding-left: 30px;
+            margin-top: 80px; /* Prevent overlap with fixed nav */
         }
 
         .most-read-container {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            align-items: center; /* Center content */
+            padding-left: 20px;
+            align-items: center;
         }
 
         .article-box {
-            width: 90%; /* Adjust width for mobile */
+            width: 90%; 
             max-width: 400px;
-            height: auto; /* Adjust height dynamically */
             background: #FFF5F3;
             display: flex;
             align-items: center;
@@ -87,11 +105,11 @@
         }
 
         .article-image {
-            width: 50px; /* Smaller images on mobile */
-            height: 70px;
+            width: 70px;
+            height: 90px;
             border-radius: 15%;
             object-fit: cover;
-            margin-right: 10px;
+            margin-right: 15px;
         }
 
         .article-text {
@@ -100,8 +118,14 @@
         }
 
         .article-text h2 {
-            font-size: 14px; /* Reduce text size on mobile */
+            font-size: 16px;
             margin: 0;
+        }
+
+        .article-text p {
+            font-size: 12px;
+            margin: 5px 0;
+            color: #555;
         }
 
         .article-text a {
@@ -114,7 +138,7 @@
             display: inline-block;
             background-color: pink;
             color: black;
-            padding: 6px 10px;
+            padding: 8px 12px;
             border-radius: 5px;
             font-size: 12px;
             text-decoration: none;
@@ -127,19 +151,19 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="articles.html">Articles</a> |
+        <a href="stories.html">Stories</a> 
+        <a href="team.html">Our Team</a>
+        <a href="book.html">Books</a>
+    </nav>
 
     <header>
         <h1>EMPOWER YOUR MIND TODAY</h1>
         <h1>Discover advice on stress, anxiety, and depression.</h1>
     </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="articles.html">Articles</a>
-        <a href="stories.html">Stories</a>
-        <a href="team.html">Our Team</a>
-        <a href="book.html">Books</a>
-    </nav>
 
     <h1 class="most-popular-title">Readers Most Favourite</h1>
 
@@ -147,7 +171,7 @@
         <div class="article-box">
             <img src="images/freedom.jpg" alt="Article 1" class="article-image">
             <div class="article-text">
-                <h2>Finding Freedom in the Power of Voice: A Journey from Silence to Strength</h2>
+                <h2>Finding Freedom in the Power of Voice:<br><br>A Journey from Silence to Strength</h2>
                 <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
             </div>
         </div>
@@ -163,7 +187,7 @@
         <div class="article-box">
             <img src="images/depression.jpg" alt="Article 3" class="article-image">
             <div class="article-text">
-                <h2>Fighting Depression Alone: Part 1 - How It Feels</h2>
+                <h2>Fighting Depression Alone: Part 1 -<br><br>How It Feels</h2>
                 <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html" class="read-more-btn">Read More</a>
             </div>
         </div>
@@ -171,11 +195,10 @@
         <div class="article-box">
             <img src="images/rape.jpg" alt="Article 4" class="article-image">
             <div class="article-text">
-                <h2>Rape: Understanding and Recognizing the Unseen Forms</h2>
+                <h2>Rape: Understanding and Recognizing<br><br>the Unseen Forms</h2>
                 <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
             </div>
         </div>
     </div>
-
 </body>
 </html>
