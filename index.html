@@ -24,7 +24,17 @@
             padding: 1em 0;
             width: 100vw;
             box-sizing: border-box;
-            margin-top: 80px; /* Increased margin to prevent overlap */
+            margin-top: 60px; /* Added margin to prevent overlap with navigation */
+        }
+
+        .blog-post {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
 
         /* Navigation Bar */
@@ -63,8 +73,18 @@
             }
             
             body {
-                background-size: 100% 100%;
+                background-size: 100% auto;
                 background-position: top center;
+            }
+
+            .most-read-container {
+                padding-left: 10px;
+                padding-right: 10px;
+                align-items: center;
+            }
+
+            .article-box {
+                width: 100%;
             }
         }
 
@@ -74,7 +94,7 @@
             text-align: left;
             width: 100%;
             padding-left: 30px;
-            margin-top: 100px; /* Adjusted to align properly */
+            margin-top: 80px; /* Prevent overlap with fixed nav */
         }
 
         .most-read-container {
@@ -181,14 +201,6 @@
             <div class="article-text">
                 <h2>Fighting Depression Alone: Part 1 -<br><br>How It Feels</h2>
                 <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html" class="read-more-btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="article-box">
-            <img src="images/rape.jpg" alt="Article 4" class="article-image">
-            <div class="article-text">
-                <h2>Rape: Understanding and Recognizing<br><br>the Unseen Forms</h2>
-                <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
             </div>
         </div>
     </div>
