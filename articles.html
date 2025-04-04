@@ -71,7 +71,7 @@ nav a {
             font-size: 16px;
         }
 
- .search-box .search-icon {
+        .search-box .search-icon {
             position: absolute;
             right: 10px;
             top: 50%;
@@ -80,20 +80,6 @@ nav a {
             font-size: 18px;
             pointer-events: none;
         }
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-    .search-box {
-        max-width: 250px; /* Reduce size on smaller screens */
-    }
-    
-    .search-box input {
-        font-size: 14px; /* Slightly smaller text */
-        padding: 8px 30px 8px 10px; /* Adjust padding */
-    }
-}
-
 
         .article-list {
             text-align: left;
@@ -136,6 +122,7 @@ nav a {
             <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
             <span class="search-icon">🔍</span>
         </div>
+
 
         <div class="article-list" id="articleList">
 	<a href="articles/Managing Panic Attacks Breathing Exercises by Dovilė Bagdonaitė.html">"Managing Panic Attacks: Breathing Exercises" by Dovilė Bagdonaitė</a>
