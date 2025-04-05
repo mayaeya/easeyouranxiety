@@ -3,87 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stories - Maya World</title>
+  <title>Articles - Maya World</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #E6E6FA;
+      text-align: center;
     }
 
-    /* Navigation */
     nav {
       background-color: navy;
-      padding: 10px 0;
+      padding: 10px;
+      width: 100vw;
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 5px;
+      flex-wrap: nowrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 5px 10px;
       font-size: 14px;
       white-space: nowrap;
     }
 
-    nav a:hover {
-      background-color: #333;
-      border-radius: 5px;
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
+
+      nav a {
+        padding: 5px 8px;
+      }
     }
 
-    /* Container */
     .container {
-      max-width: 600px;
-      margin: 20px auto;
+      width: 80%;
+      margin: auto;
       background: #FFF5F3;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      margin-top: 20px;
     }
 
-    /* Search Box */
+    /* Search Box Styling */
     .search-box {
+      display: flex;
+      justify-content: center;
       position: relative;
+      margin-bottom: 20px;
       width: 100%;
-      max-width: 300px;
-      margin: 0 auto 20px;
     }
 
     .search-box input {
       width: 100%;
+      max-width: 300px;
       padding: 10px 35px 10px 10px;
       border: 1px solid #ccc;
       border-radius: 20px;
       font-size: 16px;
     }
 
-    .search-icon {
+    .search-box .search-icon {
       position: absolute;
-      right: 10px;
+      right: calc(50% - 150px + 10px);
       top: 50%;
       transform: translateY(-50%);
       color: gray;
+      font-size: 18px;
+      pointer-events: none;
     }
 
-    /* Article List */
     .article-list {
       text-align: left;
+      max-width: 500px;
+      margin: auto;
     }
 
     .article-list a {
       display: block;
       padding: 10px;
+      background: white;
       margin: 10px 0;
-      background-color: white;
       border-radius: 5px;
-      color: #333;
-      text-decoration: none;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #333;
     }
 
     .article-list a:hover {
@@ -95,22 +107,22 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="stories.html">Stories</a>
-    <a href="team.html">Our Team</a>
+    <a href="index.html">Home</a>  
+    <a href="articles.html">Articles</a>  
+    <a href="stories.html">Stories</a> 
+    <a href="team.html">Our Team</a> 
     <a href="book.html">Books</a>
   </nav>
 
-  <!-- Page Content -->
   <div class="container">
     <h1>Stories</h1>
 
-    <!-- Search Bar -->
+    <!-- Search Box -->
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()" />
+      <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
       <span class="search-icon">🔍</span>
     </div>
+
 
     <!-- Article List -->
     <div class="article-list" id="articleList">
