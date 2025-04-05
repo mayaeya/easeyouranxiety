@@ -142,17 +142,14 @@
 
   <script>
     function searchArticles() {
-      const input = document.getElementById('searchInput');
-      const filter = input.value.toLowerCase();
-      const list = document.getElementById('articleList');
-      const links = list.getElementsByTagName('a');
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const articles = document.querySelectorAll(".article-list a");
 
-      for (let i = 0; i < links.length; i++) {
-        const text = links[i].textContent || links[i].innerText;
-        links[i].style.display = text.toLowerCase().includes(filter) ? '' : 'none';
-      }
+      articles.forEach(article => {
+        const text = article.textContent.toLowerCase();
+        article.style.display = text.includes(input) ? "block" : "none";
+      });
     }
   </script>
-
 </body>
 </html>
