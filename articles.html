@@ -11,13 +11,12 @@
       padding: 0;
       background-color: #E6E6FA;
       text-align: center;
-      overflow-x: hidden;
     }
 
     nav {
       background-color: navy;
       padding: 10px;
-      width: 100%;
+      width: 100vw;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
@@ -42,14 +41,6 @@
       nav a {
         padding: 5px 8px;
       }
-
-      .search-box {
-        max-width: 90% !important;
-      }
-
-      .search-box input {
-        font-size: 14px;
-      }
     }
 
     .container {
@@ -62,15 +53,18 @@
       margin-top: 20px;
     }
 
+    /* Search Box Styling */
     .search-box {
+      display: flex;
+      justify-content: center;
       position: relative;
+      margin-bottom: 20px;
       width: 100%;
-      max-width: 200px;
-      margin: 0 auto 20px;
     }
 
     .search-box input {
       width: 100%;
+      max-width: 300px;
       padding: 10px 35px 10px 10px;
       border: 1px solid #ccc;
       border-radius: 20px;
@@ -79,7 +73,7 @@
 
     .search-box .search-icon {
       position: absolute;
-      right: 10px;
+      right: calc(50% - 150px + 10px);
       top: 50%;
       transform: translateY(-50%);
       color: gray;
@@ -113,10 +107,10 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="stories.html">Stories</a>
-    <a href="team.html">Our Team</a>
+    <a href="index.html">Home</a>  
+    <a href="articles.html">Articles</a>  
+    <a href="stories.html">Stories</a> 
+    <a href="team.html">Our Team</a> 
     <a href="book.html">Books</a>
   </nav>
 
@@ -125,7 +119,7 @@
 
     <!-- Search Box -->
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()"/>
+      <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
       <span class="search-icon">🔍</span>
     </div>
 
@@ -175,21 +169,14 @@
 
   <script>
     function searchArticles() {
-      const input = document.getElementById("searchInput");
-      const filter = input.value.toLowerCase();
-      const list = document.getElementById("articleList");
-      const items = list.getElementsByTagName("a");
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const articles = document.querySelectorAll(".article-list a");
 
-      for (let i = 0; i < items.length; i++) {
-        const text = items[i].textContent || items[i].innerText;
-        if (text.toLowerCase().indexOf(filter) > -1) {
-          items[i].style.display = "";
-        } else {
-          items[i].style.display = "none";
-        }
-      }
+      articles.forEach(article => {
+        const text = article.textContent.toLowerCase();
+        article.style.display = text.includes(input) ? "block" : "none";
+      });
     }
   </script>
-
 </body>
 </html>
