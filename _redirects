@@ -1,4 +1,6 @@
-# Redirect all www traffic to non-www, force HTTPS
-/www.mayaworld.co.uk/*  https://mayaworld.co.uk/:splat  301
-http://www.mayaworld.co.uk/*  https://mayaworld.co.uk/:splat  301
-http://mayaworld.co.uk/*  https://mayaworld.co.uk/:splat  301
+# Redirect all HTTP to HTTPS
+http://mayaworld.co.uk/*     https://mayaworld.co.uk/:splat  301
+http://www.mayaworld.co.uk/* https://mayaworld.co.uk/:splat  301
+
+# Redirect www to non-www
+https://www.mayaworld.co.uk/* https://mayaworld.co.uk/:splat 301
