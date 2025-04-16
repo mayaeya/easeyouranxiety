@@ -1,4 +1,1 @@
-# Remove www and force HTTPS
-https://www.mayaworld.co.uk/* https://mayaworld.co.uk/:splat 301
-http://www.mayaworld.co.uk/* https://mayaworld.co.uk/:splat 301
-http://mayaworld.co.uk/* https://mayaworld.co.uk/:splat 301
+/*  https://mayaworld.co.uk/:splat  301
