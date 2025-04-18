@@ -1,211 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maya World</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-image: url('images/home.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow-x: hidden;
-            width: 100vw; /* Prevents horizontal scrolling */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maya World</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('images/home.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow-x: hidden;
+      width: 100vw;
+      font-family: Arial, sans-serif;
+    }
 
-        html, body {
-            max-width: 100%; /* Ensures nothing overflows */
-            overflow-x: hidden;
-        }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-        header {
-            background-color: pink;
-            color: purple;
-            text-align: center;
-            padding: 1em 0;
-            width: 100vw;
-            box-sizing: border-box;
-            margin-top: 60px; /* Added margin to prevent overlap with navigation */
-        }
+    nav {
+      background-color: navy;
+      padding: 10px;
+      width: 100vw;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      flex-wrap: nowrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
 
-        .blog-post {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
 
-        /* Navigation Bar */
-        nav {
-            background-color: navy;
-            padding: 10px;
-            width: 100vw;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            flex-wrap: nowrap;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
+    header {
+      background-color: pink;
+      color: purple;
+      text-align: center;
+      padding: 1em 0;
+      width: 100vw;
+      box-sizing: border-box;
+      margin-top: 60px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            font-size: 14px;
-            white-space: nowrap;
-        }
+    .most-popular-title {
+      font-size: 24px;
+      color: pink;
+      text-align: left;
+      width: 100%;
+      padding-left: 30px;
+      margin-top: 80px;
+    }
 
-        /* Mobile Fix */
-        @media (max-width: 600px) {
-            nav {
-                flex-wrap: wrap;
-                font-size: 12px;
-            }
-            
-            nav a {
-                padding: 5px 8px;
-            }
-            
-            body {
-                background-size: 100% 100%;
-            }
-        }
+    .most-read-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 30px;
+      align-items: flex-start;
+    }
 
-        .most-popular-title {
-            font-size: 24px;
-            color: pink;
-            text-align: left;
-            width: 100%;
-            padding-left: 30px;
-            margin-top: 80px; /* Prevent overlap with fixed nav */
-        }
+    .article-box {
+      width: 90%;
+      max-width: 400px;
+      background: #FFF5F3;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .most-read-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            padding-left: 30px; /* Align to the left */
-            align-items: flex-start; /* Adjust alignment */
-        }
+    .article-image {
+      width: 70px;
+      height: 90px;
+      border-radius: 15%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
 
-        .article-box {
-            width: 90%; 
-            max-width: 400px;
-            background: #FFF5F3;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    .article-text {
+      flex: 1;
+      text-align: left;
+    }
 
-        .article-image {
-            width: 70px;
-            height: 90px;
-            border-radius: 15%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
+    .article-text h2 {
+      font-size: 16px;
+      margin: 0;
+    }
 
-        .article-text {
-            flex: 1;
-            text-align: left;
-        }
+    .article-text a {
+      color: navy;
+      text-decoration: none;
+      font-size: 12px;
+    }
 
-        .article-text h2 {
-            font-size: 16px;
-            margin: 0;
-        }
+    .read-more-btn {
+      display: inline-block;
+      background-color: pink;
+      color: black;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .article-text p {
-            font-size: 12px;
-            margin: 5px 0;
-            color: #555;
-        }
+    .read-more-btn:hover {
+      background-color: hotpink;
+    }
 
-        .article-text a {
-            color: navy;
-            text-decoration: none;
-            font-size: 12px;
-        }
+    /* Footer pink bar */
+    footer {
+      background-color: pink;
+      color: purple;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 40px;
+      font-size: 14px;
+    }
 
-        .read-more-btn {
-            display: inline-block;
-            background-color: pink;
-            color: black;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 12px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
 
-        .read-more-btn:hover {
-            background-color: hotpink;
-        }
-    </style>
+      nav a {
+        padding: 5px 8px;
+      }
+
+      body {
+        background-size: 100% 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="index.html">Home</a> 
-        <a href="articles.html">Articles</a> 
-        <a href="stories.html">Stories</a> 
-        <a href="team.html">Our Team</a>
-        <a href="book.html">Books</a>
-    </nav>
 
-    <header>
-        <h1>EMPOWER YOUR MIND TODAY</h1>
-        <h1>Discover advice on stress, anxiety, and depression.</h1>
-    </header>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a> 
+    <a href="articles.html">Articles</a> 
+    <a href="stories.html">Stories</a> 
+    <a href="team.html">Our Team</a>
+    <a href="book.html">Books</a>
+  </nav>
 
-    <h1 class="most-popular-title">Readers Most Favourite</h1>
+  <header>
+    <h1>EMPOWER YOUR MIND TODAY</h1>
+    <h1>Discover advice on stress, anxiety, and depression.</h1>
+  </header>
 
-    <div class="most-read-container">
-        <div class="article-box">
-            <img src="images/freedom.jpg" alt="Article 1" class="article-image">
-            <div class="article-text">
-                <h2>Finding Freedom in the Power of Voice:<br><br>A Journey from Silence to Strength</h2>
-                <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
-            </div>
-        </div>
+  <h1 class="most-popular-title">Readers Most Favourite</h1>
 
-        <div class="article-box">
-            <img src="images/prayer.jpg" alt="Article 2" class="article-image">
-            <div class="article-text">
-                <h2>The Power of Prayer</h2>
-                <a href="articles/The Power of Prayer by Maya Norvile & Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="article-box">
-            <img src="images/depression.jpg" alt="Article 3" class="article-image">
-            <div class="article-text">
-                <h2>Fighting Depression Alone: Part 1 -<br><br>How It Feels</h2>
-                <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html" class="read-more-btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="article-box">
-            <img src="images/rape.jpg" alt="Article 4" class="article-image">
-            <div class="article-text">
-                <h2>Rape: Understanding and Recognizing<br><br>the Unseen Forms</h2>
-                <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
-            </div>
-        </div>
+  <div class="most-read-container">
+    <div class="article-box">
+      <img src="images/freedom.jpg" alt="Article 1" class="article-image" />
+      <div class="article-text">
+        <h2>Finding Freedom in the Power of Voice: A Journey from Silence to Strength</h2>
+        <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
+      </div>
     </div>
+
+    <div class="article-box">
+      <img src="images/prayer.jpg" alt="Article 2" class="article-image" />
+      <div class="article-text">
+        <h2>The Power of Prayer</h2>
+        <a href="articles/The Power of Prayer by Maya Norvile & Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="article-box">
+      <img src="images/depression.jpg" alt="Article 3" class="article-image" />
+      <div class="article-text">
+        <h2>Fighting Depression Alone: Part 1 - How It Feels</h2>
+        <a href="stories/Fighting Depression Alone Part 1 - How It Feels by Maya Norvile.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="article-box">
+      <img src="images/rape.jpg" alt="Article 4" class="article-image" />
+      <div class="article-text">
+        <h2>Rape: Understanding and Recognizing the Unseen Forms</h2>
+        <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+<footer>
+  <p>
+    Want us to write about something you're going through?<br>
+    Or share your story?<br>
+    Email us at <a href="mailto:hellomayaworld@gmail.com"><strong>hellomayaworld@gmail.com</strong></a>
+  </p>
+  <p style="font-size: 12px; color: #555; margin-top: 20px;">
+    &copy; <span id="year"></span> Maya World. All rights reserved.
+  </p>
+</footer>
+
+<script>
+  // Automatically updates the year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
