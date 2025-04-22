@@ -54,7 +54,7 @@
       padding: 1em 0;
       width: 100vw;
       box-sizing: border-box;
-      margin-top: 40px; /* moved closer to nav */
+      margin-top: 40px;
     }
 
     .most-popular-title {
@@ -126,16 +126,31 @@
     }
 
     footer {
-      background-color: navy;
-      color: white;
-      text-align: center;
-      padding: 1em 0;
       font-size: 14px;
     }
 
-    footer a {
-      color: white;
+    .contact-footer {
+      background-color: pink;
+      color: purple;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-footer a {
+      color: purple;
       text-decoration: underline;
+    }
+
+    .bottom-footer {
+      background-color: navy;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .bottom-footer span {
+      font-size: 12px;
+      color: #ccc;
     }
 
     @media (max-width: 600px) {
@@ -216,25 +231,25 @@
     </div>
   </div>
 
- <!-- Footer -->
-<footer>
-  <div style="background-color: pink; color: purple; padding: 20px; font-size: 14px;">
-    <p>
-      Want us to write about something you're going through?<br>
-      Or share your story?<br>
-      Email us at <a href="mailto:hellomayaworld@gmail.com" style="color: purple; text-decoration: underline;"><strong>hellomayaworld@gmail.com</strong></a>
-    </p>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="contact-footer">
+      <p>
+        Want us to write about something you're going through?<br>
+        Or share your story?<br>
+        Email us at <a href="mailto:hellomayaworld@gmail.com"><strong>hellomayaworld@gmail.com</strong></a>
+      </p>
+    </div>
 
-  <div style="background-color: navy; color: white; padding: 15px; font-size: 14px;">
-    This website is built and maintained with love by volunteers, sharing real experiences and support for mental wellness.<br>
-    <span style="font-size: 12px; color: #ccc;">&copy; <span id="year"></span> Maya World. All rights reserved.</span>
-  </div>
-</footer>
+    <div class="bottom-footer">
+      <p>This website is built and maintained with love by volunteers, sharing real experiences and support for mental wellness.</p>
+      <span>&copy; <span id="year"></span> Maya World. All rights reserved.</span>
+    </div>
+  </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
