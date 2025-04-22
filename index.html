@@ -4,182 +4,182 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maya World</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/home.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  nav {
+    background-color: navy;
+    padding: 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  header {
+    background-color: pink;
+    color: purple;
+    text-align: center;
+    padding: 1em 0;
+    width: 100vw;
+    margin-top: 40px;
+  }
+
+  .most-popular-title {
+    font-size: 24px;
+    color: pink;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+    margin-top: 40px;
+  }
+
+  .most-read-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .article-box {
+    width: 90%;
+    max-width: 400px;
+    background: #FFF5F3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .article-image {
+    width: 70px;
+    height: 90px;
+    border-radius: 15%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .article-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .article-text h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .article-text a {
+    color: navy;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+    background-color: pink;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .read-more-btn:hover {
+    background-color: hotpink;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .contact-footer {
+    background-color: pink;
+    color: purple;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contact-footer a {
+    color: purple;
+    text-decoration: underline;
+  }
+
+  .bottom-footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .bottom-footer span {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  /* Mobile Fix */
+  @media (max-width: 600px) {
     body {
-      margin: 0;
-      padding: 0;
       background-image: url('images/home.jpg');
       background-size: cover;
-      background-position: center bottom;
+      background-position: center center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-      width: 100vw;
-      min-height: 100vh;
-    }
-
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
+      background-attachment: scroll;
     }
 
     nav {
-      background-color: navy;
-      padding: 10px;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      gap: 5px;
-      flex-wrap: nowrap;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
+      flex-wrap: wrap;
+      font-size: 12px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      padding: 5px 10px;
-      font-size: 14px;
-      white-space: nowrap;
+      padding: 5px 8px;
     }
 
     header {
-      background-color: pink;
-      color: purple;
-      text-align: center;
-      padding: 1em 0;
-      width: 100vw;
-      margin-top: 40px; /* nav height */
-    }
-
-    .most-popular-title {
-      font-size: 24px;
-      color: pink;
-      text-align: left;
-      width: 100%;
-      padding-left: 30px;
       margin-top: 40px;
     }
-
-    .most-read-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding-left: 30px;
-      align-items: flex-start;
-      margin-bottom: 40px;
-    }
-
-    .article-box {
-      width: 90%;
-      max-width: 400px;
-      background: #FFF5F3;
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .article-image {
-      width: 70px;
-      height: 90px;
-      border-radius: 15%;
-      object-fit: cover;
-      margin-right: 15px;
-    }
-
-    .article-text {
-      flex: 1;
-      text-align: left;
-    }
-
-    .article-text h2 {
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .article-text a {
-      color: navy;
-      text-decoration: none;
-      font-size: 12px;
-    }
-
-    .read-more-btn {
-      display: inline-block;
-      background-color: pink;
-      color: black;
-      padding: 8px 12px;
-      border-radius: 5px;
-      font-size: 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .read-more-btn:hover {
-      background-color: hotpink;
-    }
-
-    footer {
-      font-size: 14px;
-    }
-
-    .contact-footer {
-      background-color: pink;
-      color: purple;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .contact-footer a {
-      color: purple;
-      text-decoration: underline;
-    }
-
-    .bottom-footer {
-      background-color: navy;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    .bottom-footer span {
-      font-size: 12px;
-      color: #ccc;
-    }
-
-    /* Mobile Fix */
-   @media (max-width: 600px) {
-  body {
-    background-image: url('images/home.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
   }
-}
+</style>
 
-      nav {
-        flex-wrap: wrap;
-        font-size: 12px;
-      }
-
-      nav a {
-        padding: 5px 8px;
-      }
-
-      header {
-        margin-top: 40px;
-      }
-    }
-  </style>
 </head>
 <body>
 
