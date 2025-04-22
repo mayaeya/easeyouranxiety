@@ -216,23 +216,25 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
+ <!-- Footer -->
+<footer>
+  <div style="background-color: pink; color: purple; padding: 20px; font-size: 14px;">
     <p>
       Want us to write about something you're going through?<br>
       Or share your story?<br>
-      Email us at <a href="mailto:hellomayaworld@gmail.com"><strong>hellomayaworld@gmail.com</strong></a>
+      Email us at <a href="mailto:hellomayaworld@gmail.com" style="color: purple; text-decoration: underline;"><strong>hellomayaworld@gmail.com</strong></a>
     </p>
-    <p style="margin-top: 10px;">
-      This website is built and maintained with love by volunteers, sharing real experiences and support for mental wellness.<br>
-      &copy; <span id="year"></span> Maya World. All rights reserved.
-    </p>
-  </footer>
+  </div>
 
-  <script>
-    // Automatically sets the current year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div style="background-color: navy; color: white; padding: 15px; font-size: 14px;">
+    This website is built and maintained with love by volunteers, sharing real experiences and support for mental wellness.<br>
+    <span style="font-size: 12px; color: #ccc;">&copy; <span id="year"></span> Maya World. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
