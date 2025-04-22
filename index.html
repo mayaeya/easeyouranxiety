@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maya World</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -28,7 +32,6 @@
       background-color: navy;
       padding: 10px;
       width: 100vw;
-      box-sizing: border-box;
       display: flex;
       justify-content: center;
       gap: 5px;
@@ -53,8 +56,7 @@
       text-align: center;
       padding: 1em 0;
       width: 100vw;
-      box-sizing: border-box;
-      margin-top: 60px; /* leaves space for nav */
+      margin-top: 40px; /* nav height */
     }
 
     .most-popular-title {
@@ -153,8 +155,16 @@
       color: #ccc;
     }
 
-    /* MOBILE SETTINGS */
+    /* Mobile Fix */
     @media (max-width: 600px) {
+      body {
+        background-image: url('images/home.jpg');
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+
       nav {
         flex-wrap: wrap;
         font-size: 12px;
@@ -164,14 +174,8 @@
         padding: 5px 8px;
       }
 
-      body {
-        background-size: contain;
-        background-position: center bottom;
-        background-attachment: scroll;
-      }
-
       header {
-        margin-top: 60px;
+        margin-top: 40px;
       }
     }
   </style>
@@ -197,7 +201,6 @@
   <h1 class="most-popular-title">Readers Most Favourite</h1>
 
   <div class="most-read-container">
-    <!-- Article Boxes -->
     <div class="article-box">
       <img src="images/freedom.jpg" alt="Article 1" class="article-image" />
       <div class="article-text">
