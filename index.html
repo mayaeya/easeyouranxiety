@@ -5,20 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maya World</title>
   <style>
- body {
+body {
   margin: 0;
   padding: 0;
   background-image: url('images/home.jpg');
-  background-size: contain;
-  background-position: bottom center;
+  background-size: cover;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-color: #E6E6FA; /* fallback color */
+  background-attachment: fixed;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   width: 100vw;
   min-height: 100vh;
+  padding-top: 300px; /* push content down on desktop */
 }
+
+@media (max-width: 600px) {
+  body {
+    background-size: contain;
+    background-position: center bottom;
+    background-attachment: scroll;
+    padding-top: 100px; /* less space needed on mobile */
+  }
+}
+
     html, body {
       max-width: 100%;
       overflow-x: hidden;
