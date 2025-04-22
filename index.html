@@ -52,7 +52,7 @@
       text-align: center;
       padding: 1em 0;
       width: 100vw;
-      margin-top: 40px; /* enough to clear nav bar */
+      margin-top: 40px;
     }
 
     .most-popular-title {
@@ -152,16 +152,14 @@
     }
 
     /* Mobile Fix */
-   @media (max-width: 600px) {
-  body {
-    background-image: url('images/home.jpg');
-    background-size: cover;
-    background-position: center center; /* <-- THIS will center the woman */
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-}
-
+    @media (max-width: 600px) {
+      body {
+        background-image: url('images/home.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
 
       nav {
         flex-wrap: wrap;
