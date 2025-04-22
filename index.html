@@ -152,11 +152,16 @@
     }
 
     /* Mobile Fix */
-    @media (max-width: 600px) {
-      body {
-        background-position: center center;
-        background-attachment: scroll;
-      }
+   @media (max-width: 600px) {
+  body {
+    background-image: url('images/home.jpg');
+    background-size: cover;
+    background-position: center center; /* <-- THIS will center the woman */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+
 
       nav {
         flex-wrap: wrap;
