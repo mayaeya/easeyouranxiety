@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maya World</title>
+  <!-- Meta Description for SEO -->
+  <meta name="description" content="Soft words for heavy days: mental health support, self-help tips, and advice for anxiety, depression, and emotional healing." />
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="mental health, self-help, anxiety, depression, emotional healing, wellness, support" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
-      max-width: 100%;
       overflow-x: hidden;
       font-family: Arial, sans-serif;
       width: 100vw;
       min-height: 100vh;
+    }
+    /* Desktop hero background on body */
+    body {
       background-image: url('images/home.jpg');
       background-size: cover;
       background-position: center bottom;
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-
-    /* Mobile image section */
+    /* Mobile hero container, hidden on desktop */
     .mobile-hero {
       display: none;
     }
-
     nav {
       background-color: navy;
       padding: 10px;
@@ -36,13 +37,11 @@
       display: flex;
       justify-content: center;
       gap: 5px;
-      flex-wrap: nowrap;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 1000;
     }
-
     nav a {
       color: white;
       text-decoration: none;
@@ -50,16 +49,14 @@
       font-size: 14px;
       white-space: nowrap;
     }
-
     header {
       background-color: pink;
       color: purple;
       text-align: center;
       padding: 1em 0;
       width: 100vw;
-      margin-top: 40px;
+      margin-top: 40px; /* clear nav bar */
     }
-
     .most-popular-title {
       font-size: 24px;
       color: pink;
@@ -68,7 +65,6 @@
       padding-left: 30px;
       margin-top: 40px;
     }
-
     .most-read-container {
       display: flex;
       flex-direction: column;
@@ -77,7 +73,6 @@
       align-items: flex-start;
       margin-bottom: 40px;
     }
-
     .article-box {
       width: 90%;
       max-width: 400px;
@@ -88,7 +83,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
     .article-image {
       width: 70px;
       height: 90px;
@@ -96,23 +90,8 @@
       object-fit: cover;
       margin-right: 15px;
     }
-
-    .article-text {
-      flex: 1;
-      text-align: left;
-    }
-
-    .article-text h2 {
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .article-text a {
-      color: navy;
-      text-decoration: none;
-      font-size: 12px;
-    }
-
+    .article-text { flex: 1; text-align: left; }
+    .article-text h2 { font-size: 16px; margin: 0; }
     .read-more-btn {
       display: inline-block;
       background-color: pink;
@@ -123,82 +102,53 @@
       text-decoration: none;
       font-weight: bold;
     }
-
-    .read-more-btn:hover {
-      background-color: hotpink;
-    }
-
-    footer {
-      font-size: 14px;
-    }
-
+    .read-more-btn:hover { background-color: hotpink; }
     .contact-footer {
       background-color: pink;
       color: purple;
       text-align: center;
       padding: 20px;
     }
-
-    .contact-footer a {
-      color: purple;
-      text-decoration: underline;
-    }
-
+    .contact-footer a { color: purple; text-decoration: underline; }
     .bottom-footer {
       background-color: navy;
       color: white;
       text-align: center;
       padding: 15px;
     }
-
-    .bottom-footer span {
-      font-size: 12px;
-      color: #ccc;
-    }
-
+    .bottom-footer span { font-size: 12px; color: #ccc; }
+    /* Responsive mobile adjustments */
     @media (max-width: 600px) {
-      body {
-        background: none;
-      }
-
+      /* Hide desktop background, show mobile hero */
+      body { background: none; }
       .mobile-hero {
         display: block;
         width: 100vw;
-        height: 80vh;
+        height: 100vh; /* full height */
         background-image: url('images/home.jpg');
-        background-size: cover;
-        background-position: center center;
+        background-size: contain; /* show full image */
+        background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
+        margin-top: 40px; /* clear nav */
       }
-
-      nav {
-        flex-wrap: wrap;
-        font-size: 12px;
-      }
-
-      nav a {
-        padding: 5px 8px;
-      }
-
-      header {
-        margin-top: 40px;
-      }
+      nav { flex-wrap: wrap; font-size: 12px; }
+      nav a { padding: 5px 8px; }
+      header { margin-top: 0; }
     }
   </style>
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a> 
-    <a href="articles.html">Articles</a> 
-    <a href="stories.html">Stories</a> 
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="stories.html">Stories</a>
     <a href="team.html">Our Team</a>
     <a href="book.html">Books</a>
   </nav>
 
-  <!-- Mobile Hero Image -->
+  <!-- Mobile Hero for small screens -->
   <div class="mobile-hero"></div>
 
   <!-- Header -->
@@ -209,7 +159,6 @@
 
   <!-- Most Favourite Articles -->
   <h1 class="most-popular-title">Readers Most Favourite</h1>
-
   <div class="most-read-container">
     <div class="article-box">
       <img src="images/freedom.jpg" alt="Article 1" class="article-image" />
@@ -222,7 +171,7 @@
     <div class="article-box">
       <img src="images/prayer.jpg" alt="Article 2" class="article-image" />
       <div class="article-text">
-        <h2>The Quiet Power of Old Churches How Sacred Architecture Affects Our Mental Health</h2>
+        <h2>The Quiet Power of Old Churches: How Sacred Architecture Affects Our Mental Health</h2>
         <a href="articles/The Quiet Power of Old Churches How Sacred Architecture Affects Our Mental Health by Hema Kusk (Žiedūnė) & Maya Norvile.html" class="read-more-btn">Read More</a>
       </div>
     </div>
@@ -255,22 +204,13 @@
   <!-- Footer -->
   <footer>
     <div class="contact-footer">
-      <p>
-        Want us to write about something you're going through?<br>
-        Or share your story?<br>
-        Email us at <a href="mailto:hellomayaworld@gmail.com"><strong>hellomayaworld@gmail.com</strong></a>
-      </p>
+      <p>Want us to write about something you&amp;#39;re going through?<br>Or share your story?<br>Email us at <a href="mailto:hellomayaworld@gmail.com"><strong>hellomayaworld@gmail.com</strong></a></p>
     </div>
-
     <div class="bottom-footer">
       <p>This website is built and maintained with love by volunteers, sharing real experiences and support for mental wellness.</p>
-      <span>&copy; <span id="year"></span> Maya World. All rights reserved.</span>
+      <span>&amp;copy; <span id="year"></span> Maya World. All rights reserved.</span>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
