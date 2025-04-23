@@ -24,6 +24,11 @@
       background-attachment: fixed;
     }
 
+    /* Mobile image section */
+    .mobile-hero {
+      display: none;
+    }
+
     nav {
       background-color: navy;
       padding: 10px;
@@ -151,31 +156,35 @@
       color: #ccc;
     }
 
-    /* Mobile Fix */
-/* Mobile Fix */
-@media (max-width: 600px) {
-  body {
-    background-image: url('images/home.jpg');
-    background-size: auto 170%; /* Increase vertical height */
-    background-position: center 50%; /* Move image upward */
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
+    @media (max-width: 600px) {
+      body {
+        background: none;
+      }
 
-  nav {
-    flex-wrap: wrap;
-    font-size: 12px;
-  }
+      .mobile-hero {
+        display: block;
+        width: 100vw;
+        height: 80vh;
+        background-image: url('images/home.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
 
-  nav a {
-    padding: 5px 8px;
-  }
+      nav {
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
 
-  header {
-    margin-top: 40px;
-  }
-}
+      nav a {
+        padding: 5px 8px;
+      }
 
+      header {
+        margin-top: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -188,6 +197,9 @@
     <a href="team.html">Our Team</a>
     <a href="book.html">Books</a>
   </nav>
+
+  <!-- Mobile Hero Image -->
+  <div class="mobile-hero"></div>
 
   <!-- Header -->
   <header>
