@@ -152,30 +152,30 @@
     }
 
     /* Mobile Fix */
-   @media (max-width: 600px) {
+/* Mobile Fix */
+@media (max-width: 600px) {
   body {
     background-image: url('images/home.jpg');
-    background-size: auto 130%;
-    background-position: center bottom;
+    background-size: auto 170%; /* Increase vertical height */
+    background-position: center 80%; /* Move image upward */
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+
+  nav {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  nav a {
+    padding: 5px 8px;
+  }
+
+  header {
+    margin-top: 40px;
+  }
 }
 
-
-      nav {
-        flex-wrap: wrap;
-        font-size: 12px;
-      }
-
-      nav a {
-        padding: 5px 8px;
-      }
-
-      header {
-        margin-top: 40px;
-      }
-    }
   </style>
 </head>
 <body>
