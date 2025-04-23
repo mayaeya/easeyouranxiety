@@ -162,14 +162,24 @@
 
   .mobile-hero {
     display: block;
+    position: relative;
     width: 100vw;
-    height: 90vh; /* taller to show her feet */
+    height: 90vh;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .mobile-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/home.jpg');
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-    margin-top: 40px; /* to clear the nav */
+    z-index: -1;
   }
 }
       nav {
