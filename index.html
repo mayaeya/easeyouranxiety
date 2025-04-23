@@ -7,7 +7,7 @@
   <!-- Meta Description for SEO -->
   <meta name="description" content="Soft words for heavy days: mental health support, self-help tips, and advice for anxiety, depression, and emotional healing." />
   <!-- SEO Keywords -->
-  <meta name="keywords" content="mental health, self-help, anxiety, depression, emotional healing, wellness, support" />
+  <meta name="keywords" content="mental health, self-help, anxiety, depression, emotional healing, wellness, support, healing stories, stress relief, inner peace, personal growth" />
   <style>
     * {
       box-sizing: border-box;
@@ -26,6 +26,10 @@
       background-position: center bottom;
       background-repeat: no-repeat;
       background-attachment: fixed;
+    }
+
+    .mobile-hero {
+      display: none;
     }
 
     nav {
@@ -154,18 +158,23 @@
       font-size: 12px;
       color: #ccc;
     }
-/* Mobile Fix */
-@media (max-width: 600px) {
-  body {
-    background-image: url('images/home.jpg');
-    background-size: cover;
-        background-position: 60% 120%;;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-}
 
+    @media (max-width: 600px) {
+      body {
+        background: none;
+      }
 
+      .mobile-hero {
+        display: block;
+        width: 100vw;
+        height: 90vh;
+        background-image: url('images/home.jpg');
+        background-size: cover;
+        background-position: 60% 70%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        margin-top: 40px;
+      }
 
       nav {
         flex-wrap: wrap;
@@ -177,7 +186,7 @@
       }
 
       header {
-        margin-top: 40px;
+        margin-top: 0;
       }
     }
   </style>
@@ -186,12 +195,15 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a> 
-    <a href="articles.html">Articles</a> 
-    <a href="stories.html">Stories</a> 
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="stories.html">Stories</a>
     <a href="team.html">Our Team</a>
     <a href="book.html">Books</a>
   </nav>
+
+  <!-- Mobile Hero Section -->
+  <div class="mobile-hero"></div>
 
   <!-- Header -->
   <header>
@@ -201,6 +213,7 @@
 
   <!-- Most Favourite Articles -->
   <h1 class="most-popular-title">Readers Most Favourite</h1>
+
 
   <div class="most-read-container">
     <div class="article-box">
@@ -244,7 +257,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+ <!-- Footer -->
   <footer>
     <div class="contact-footer">
       <p>
