@@ -11,37 +11,20 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-       nav {
-    background-color: navy;
-    padding: 10px;
-    width: 100vw;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    gap: 5px; /* Reduce space between links */
-    flex-wrap: nowrap; /* Prevents links from jumping to a new line */
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px; /* Smaller padding */
-    font-size: 14px; /* Smaller text */
-    white-space: nowrap; /* Prevents words from breaking */
-}
-
-/* Mobile Fix */
-@media (max-width: 600px) {
-    nav {
-        flex-wrap: wrap; /* Only allow wrapping if absolutely needed */
-        font-size: 12px; /* Even smaller font for small screens */
-    }
-    
-    nav a {
-        padding: 5px 8px; /* Even smaller padding */
-    }
-}
-
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
         .container {
             width: 80%;
             margin: auto;
@@ -76,10 +59,10 @@ nav a {
 
     <!-- Navigation -->
     <nav>
-        <a href="../index.html">Home</a>  
-        <a href="../articles.html">Articles</a>  
-        <a href="../stories.html">Stories</a> 
-        <a href="../team.html">Our Team</a> 
+        <a href="../index.html">Home</a> | 
+        <a href="../articles.html">Articles</a> | 
+        <a href="../stories.html">Stories</a> |
+        <a href="../team.html">Our Team</a> |
         <a href="../book.html">Books</a>
     </nav>
 
