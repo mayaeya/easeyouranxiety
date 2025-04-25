@@ -49,7 +49,7 @@
     }
 
     header {
-      background-color: beige;
+      background-color: #FFF5F3;
       color: #5a2a6b;
       text-align: center;
       padding: 1em 0;
@@ -134,7 +134,7 @@
     }
 
     .contact-footer {
-      background-color: beige;
+      background-color: #FFF5F3;
       color: #5a2a6b;
       text-align: center;
       padding: 20px;
@@ -190,14 +190,38 @@
     <a href="book.html">Books</a>
   </nav>
 
-  <!-- Header -->
-  <header>
-    <h2>SOFT WORDS FOR HEAVY DAYS</h2>
-    <h3>Mental health support, self-help tips, and advice for anxiety, depression, and emotional healing.</h3>
-    <p style="font-size: 14px; line-height: 1.5; color: #5a2a6b; margin: 10px auto; max-width: 700px;">
-      Maya World is a peaceful space created by people who understand what it’s like to live with anxiety, depression, and emotional burnout. Through personal stories and gentle self-help tools, we offer quiet support for your healing journey — one small step at a time.
-    </p>
-    <a href="articles/Why-Maya-World.html" class="why-maya-btn">Why Maya World?</a>
+ <!-- Header -->
+<header>
+  <h2>SOFT WORDS FOR HEAVY DAYS</h2>
+  <h3>Mental health support, self-help tips, and advice for anxiety, depression, and emotional healing.</h3>
+  <p style="font-size: 14px; line-height: 1.5; color: #5a2a6b; margin: 10px auto; max-width: 700px;">
+    Maya World is a peaceful space created by people who understand what it’s like to live with anxiety, depression, and emotional burnout. Through personal stories and gentle self-help tools, we offer quiet support for your healing journey — one small step at a time.
+  </p>
+  <a href="articles/Why-Maya-World.html" class="why-maya-btn">
+    Why Maya World?
+  </a>
+</header>
+
+<style>
+  .why-maya-btn {
+    display: inline-block;
+    background-color: #FFF5F3; /* Changed to match article box color */
+    color: #5a2a6b; /* Adjusted to match the header text */
+    border: 1px solid #d48aad;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .why-maya-btn:hover {
+    background-color: #d48aad; /* More consistent hover effect */
+    color: white; /* Better contrast when hovering */
+  }
+</style>
   </header>
 
   <!-- Most Favourite Articles -->
@@ -213,7 +237,37 @@
       </div>
     </div>
 
-    <!-- More article boxes... -->
+<div class="article-box">
+      <img src="images/depression.jpg" alt="Article 3" class="article-image" />
+      <div class="article-text">
+        <h2>Instant Calm: 13 Fast Anxiety Hacks When Nothing Else Works</h2>
+        <a href="articles/Instant Calm 13 Fast Anxiety Hacks When Nothing Else Works by Maya Norvile.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="article-box">
+      <img src="images/freedom.jpg" alt="Article 1" class="article-image" />
+      <div class="article-text">
+        <h2>Finding Freedom in the Power of Voice: A Journey from Silence to Strength</h2>
+        <a href="stories/Finding Freedom in the Power of Voice A Journey from Silence to Strength by Hema Kusk (Žiedūnė).html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    
+    <div class="article-box">
+      <img src="images/rape.jpg" alt="Article 4" class="article-image" />
+      <div class="article-text">
+        <h2>Rape: Understanding and Recognizing the Unseen Forms</h2>
+        <a href="articles/Rape Understanding and Recognizing the Unseen Forms by Maya Norvile.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="article-box">
+      <img src="images/fifth.png" alt="Article 5" class="article-image" />
+      <div class="article-text">
+        <h2>Unveiling Hidden Depression: Recognizing the Subtle Signs</h2>
+        <a href="articles/Unveiling Hidden Depression Recognizing the Subtle Signs by Maya Norvile.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
