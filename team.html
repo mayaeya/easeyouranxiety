@@ -103,18 +103,21 @@
     margin: auto;
     padding-bottom: 10px;
   }
-   .float-emoji {
+  .float-emoji {
   display: inline-block;
-  animation: floatUpDown 2s ease-in-out infinite;
+  animation: floatSpinGlow 3s ease-in-out infinite;
   transform-origin: center;
+  filter: drop-shadow(0 0 4px #FFD700); /* golden glow */
 }
 
-@keyframes floatUpDown {
+@keyframes floatSpinGlow {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 4px #FFD700);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(360deg);
+    filter: drop-shadow(0 0 10px #FFD700);
   }
 }
 
