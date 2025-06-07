@@ -105,22 +105,18 @@
   }
   .float-emoji {
   display: inline-block;
-  animation: floatSpinGlow 3s ease-in-out infinite;
+  animation: floatUpDown 2s ease-in-out infinite;
   transform-origin: center;
-  filter: drop-shadow(0 0 4px #FFD700); /* golden glow */
 }
 
-@keyframes floatSpinGlow {
+@keyframes floatUpDown {
   0%, 100% {
-    transform: translateY(0) rotate(0deg);
-    filter: drop-shadow(0 0 4px #FFD700);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px) rotate(360deg);
-    filter: drop-shadow(0 0 10px #FFD700);
+    transform: translateY(-5px);
   }
 }
-
 </style>
 
 </head>
