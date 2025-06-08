@@ -193,15 +193,19 @@
 }
 
 .eya-logo {
-  width: 120px;
-  max-width: 90%;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
+  width: 90px;
+  max-width: 80%;
+  border-radius: 12px;
+  opacity: 0.95;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .eya-logo:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
   </style>
 </head>
 <body>
@@ -214,9 +218,6 @@
     <a href="team.html">Our Team</a>
     <a href="book.html">Books</a>
   </nav>
-  <div class="logo-container">
-  <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
-</div>
 
   <!-- Header -->
   <header>
@@ -225,6 +226,9 @@
     <p style="font-size: 14px; line-height: 1.5; color: #5a2a6b; margin: 10px auto; max-width: 700px;">
       Ease Your Anxiety is a peaceful space created by people who understand what it’s like to live with anxiety, depression, and emotional burnout. Through personal stories and gentle self-help tools, we offer quiet support for your healing journey — one small step at a time.
     </p>
+      <div class="logo-container">
+  <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
+</div>
     <a href="articles/Why-Maya-World.html" class="why-maya-btn">Why This Space Exists</a>
   </header>
 
