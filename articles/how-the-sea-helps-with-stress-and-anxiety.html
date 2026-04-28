@@ -88,10 +88,32 @@ nav a {
         .article-list a:hover {
             background-color: #ddd;
         }
+
+.related-buttons {
+    display: flex;
+    flex-wrap: wrap; /* allows side by side */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.related-buttons a {
+    display: inline-block;
+    background-color: #f3c6d3; /* soft pink */
+    color: #000;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid #d89bb0;
+    transition: 0.3s;
+}
+
+.related-buttons a:hover {
+    background-color: #e9aebe; /* slightly darker pink */
+}
     </style>
 </head>
 <body>
-
     <!-- Navigation -->
     <nav>
         <a href="../index.html">Home</a>  
