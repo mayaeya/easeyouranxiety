@@ -197,13 +197,9 @@
     }
    .logo-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 5px;
+  text-align: center;
+  margin-top: 5px; /* or even 0 if you want it really tight */
   margin-bottom: 0;
-  padding: 0 12px;
 }
 
 .eya-logo {
@@ -220,108 +216,120 @@
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.home-install-link {
-  display: inline-flex;
+.install-action-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.install-action-row > a {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.home-install-tile {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+  padding: 10px 8px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 8px 12px;
-  background-color: #f8cde3;
-  color: #880e4f;
-  border: 1px solid #d48aad;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
+  gap: 8px;
+  background: #eee8f6;
+  color: #4e3d7a;
+  border: 1px solid #d36c94;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  font: bold 13px/1.2 Arial, sans-serif;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.home-install-link:hover {
-  background-color: hotpink;
-  color: black;
+.home-install-tile svg {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.home-install-link:focus-visible {
+.home-install-tile:hover {
+  background: #e4dbf0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-install-tile:focus-visible {
   outline: 3px solid #5a2a6b;
   outline-offset: 2px;
 }
 
-.home-install-link[hidden],
-#pwa-install-section[hidden],
+.home-install-tile[hidden],
+[data-pwa-caption][hidden],
 [data-pwa-ios-instructions][hidden],
 [data-pwa-installed-message][hidden] {
   display: none !important;
 }
 
-#pwa-install-section {
-  width: min(620px, calc(100% - 40px));
-  margin: 20px auto 32px;
-  padding: 18px 22px;
-  background: #FFF5F3;
+[data-pwa-caption],
+[data-pwa-ios-instructions],
+[data-pwa-installed-message] {
+  max-width: min(440px, calc(100% - 24px));
+  margin: 8px auto 0;
   color: #5a2a6b;
-  text-align: center;
-  border: 1px solid rgba(211, 108, 148, 0.55);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-#pwa-install-section h2 {
-  margin: 0 0 8px;
-  color: navy;
-  font-size: 22px;
-  line-height: 1.25;
-}
-
-#pwa-install-section p {
-  margin: 8px 0 14px;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-#pwa-install-section [data-pwa-ios-instructions],
-#pwa-install-section [data-pwa-installed-message] {
-  margin-top: 12px;
   font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+[data-pwa-ios-instructions],
+[data-pwa-installed-message] {
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {
-  .logo-container {
+  .install-action-row {
     gap: 8px;
-    padding: 0 12px;
   }
 
-  .home-install-link {
-    min-height: 38px;
-    padding: 8px 10px;
+  [data-pwa-caption],
+  [data-pwa-ios-instructions],
+  [data-pwa-installed-message] {
+    max-width: calc(100% - 20px);
     font-size: 13px;
   }
-
-  #pwa-install-section {
-    width: calc(100% - 32px);
-    margin: 18px auto 28px;
-    padding: 16px 14px;
-  }
-
-  #pwa-install-section h2 {
-    font-size: 20px;
-  }
 }
 
-@media (max-width: 360px) {
-  .logo-container {
-    gap: 8px;
-    padding: 0 10px;
+@media (max-width: 260px) {
+  .install-action-row {
+    gap: 6px;
   }
 
-  .home-install-link {
-    padding: 7px 9px;
+  .eya-logo {
+    width: 94px;
+  }
+
+  .home-install-tile {
+    flex-basis: 94px;
+    width: 94px;
+    height: 94px;
+    gap: 6px;
+    padding: 8px 6px;
     font-size: 12px;
   }
-}
 
+  .home-install-tile svg {
+    width: 24px;
+    height: 24px;
+  }
+}
   </style>
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -344,21 +352,25 @@
  <!-- Header -->
 <header>
   <div class="logo-container">
-    <a href="articles/Why-Maya-World.html">
-      <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
-    </a>
-    <button class="home-install-link" type="button" data-pwa-install hidden>Get the App</button>
+    <div class="install-action-row" role="group" aria-label="About and app installation">
+      <a href="articles/Why-Maya-World.html">
+        <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
+      </a>
+      <button class="home-install-tile" type="button" data-pwa-install aria-describedby="pwa-install-caption" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v11"></path>
+          <path d="m7.5 9.5 4.5 4.5 4.5-4.5"></path>
+          <path d="M5 17v3h14v-3"></path>
+        </svg>
+        <span>Get the App</span>
+      </button>
+    </div>
+    <p id="pwa-install-caption" data-pwa-caption hidden>Install our free app for easier access.</p>
+    <p data-pwa-ios-instructions tabindex="-1" hidden></p>
+    <p data-pwa-installed-message aria-live="polite" hidden>Ease Your Anxiety is installed. Open it from your Home Screen.</p>
   </div>
 </header>
 </style>
-
-  <section id="pwa-install-section" aria-labelledby="pwa-install-heading" hidden>
-    <h2 id="pwa-install-heading">Take Ease Your Anxiety with you</h2>
-    <p>Read helpful articles wherever you are. Install our free app for easier access.</p>
-    <button class="home-install-link" type="button" data-pwa-install hidden>Get the App</button>
-    <p data-pwa-ios-instructions tabindex="-1" hidden>On iPhone or iPad, open this website in Safari, tap Share → Add to Home Screen.</p>
-    <p data-pwa-installed-message aria-live="polite" hidden>Ease Your Anxiety is installed. Open it from your Home Screen.</p>
-  </section>
 
   <!-- Most Favourite Articles -->
   <h2 class="most-popular-title">Readers' Most Favourite</h2>
