@@ -1,9 +1,18 @@
 (function () {
   const installButton = document.querySelector("[data-pwa-install]");
-  const iosInstructions = document.querySelector("[data-pwa-ios-instructions]");
-  const installedMessage = document.querySelector("[data-pwa-installed-message]");
-  if (!installButton || !iosInstructions || !installedMessage) return;
+  const installIcon = installButton && installButton.querySelector("svg");
+  const installLabel = installButton && installButton.querySelector(".home-install-label");
+  const installDescription = installButton &&
+    installButton.querySelector(".home-install-description");
+  if (!installButton || !installIcon || !installLabel || !installDescription) return;
 
+  const defaultLabel = "Get the App";
+  const defaultDescription = "Install our free app for easier access.";
+  const installedLabel = "App Installed";
+  const installedDescription =
+    "Ease Your Anxiety is installed. Open it from your Home Screen.";
+  const downloadIcon = installIcon.innerHTML;
+  const checkIcon = '<path d="m5 12 4 4L19 6"></path>';
   const ua = navigator.userAgent || "";
   const isIOS = /iPad|iPhone|iPod/i.test(ua) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
@@ -13,24 +22,38 @@
     window.matchMedia("(display-mode: standalone)").matches) ||
     navigator.standalone === true;
   let deferredPrompt = null;
+  let showingIOSInstructions = false;
 
-  function hideInstallOptions() {
-    installButton.hidden = true;
-    iosInstructions.hidden = true;
-    installedMessage.hidden = true;
-  }
-
-  function showInstallOptions() {
+  function showNotInstalled() {
     installButton.hidden = false;
-    installedMessage.hidden = true;
+    installIcon.innerHTML = downloadIcon;
+    installLabel.textContent = defaultLabel;
+    installDescription.textContent = defaultDescription;
+    installDescription.style.fontSize = "";
+    installButton.dataset.installState = "not-installed";
   }
 
-  function showInstalled(message) {
-    installButton.hidden = true;
-    iosInstructions.hidden = true;
-    installedMessage.textContent = message ||
-      "Ease Your Anxiety is installed. Open it from your Home Screen.";
-    installedMessage.hidden = false;
+  function showInstalled() {
+    installButton.hidden = false;
+    installIcon.innerHTML = checkIcon;
+    installLabel.textContent = installedLabel;
+    installDescription.textContent = installedDescription;
+    installDescription.style.fontSize = "";
+    installButton.dataset.installState = "installed";
+    installButton.setAttribute("aria-label",
+      installedLabel + ". " + installedDescription);
+  }
+
+  function showIOSInstructions() {
+    showingIOSInstructions = true;
+    installLabel.textContent = "Add to Home Screen";
+    installDescription.textContent = isSafariIOS
+      ? "Tap Share → Add to Home Screen."
+      : "Open in Safari, then tap Share → Add to Home Screen.";
+    installDescription.style.fontSize = "9px";
+    installButton.dataset.installState = "ios-instructions";
+    installButton.setAttribute("aria-label",
+      installLabel.textContent + ". " + installDescription.textContent);
   }
 
   if (isStandalone) {
@@ -38,48 +61,52 @@
     return;
   }
 
+  showNotInstalled();
+
   if (isIOS) {
-    showInstallOptions();
-    iosInstructions.textContent = isSafariIOS
-      ? "In Safari, tap Share → Add to Home Screen."
-      : "Open this page in Safari, then tap Share → Add to Home Screen.";
-    iosInstructions.hidden = false;
     installButton.addEventListener("click", function () {
-      iosInstructions.scrollIntoView({ behavior: "smooth", block: "center" });
-      iosInstructions.focus({ preventScroll: true });
+      if (showingIOSInstructions) {
+        showingIOSInstructions = false;
+        showNotInstalled();
+      } else {
+        showIOSInstructions();
+      }
     });
     return;
   }
 
-  hideInstallOptions();
-
   window.addEventListener("beforeinstallprompt", function (event) {
     event.preventDefault();
     deferredPrompt = event;
-    showInstallOptions();
   });
 
   installButton.addEventListener("click", async function () {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) {
+      installLabel.textContent = "Install from browser menu";
+      installDescription.textContent =
+        "Use your browser menu to install this app.";
+      installDescription.style.fontSize = "9px";
+      installButton.dataset.installState = "browser-menu";
+      window.setTimeout(function () {
+        if (installButton.dataset.installState === "browser-menu") {
+          showNotInstalled();
+        }
+      }, 4000);
+      return;
+    }
+
     const promptEvent = deferredPrompt;
     deferredPrompt = null;
     try {
       await promptEvent.prompt();
       const choice = await promptEvent.userChoice;
       if (choice && choice.outcome === "accepted") {
-        showInstalled("Ease Your Anxiety is being installed.");
-      } else {
-        installButton.hidden = true;
-        installedMessage.textContent =
-          "You can install Ease Your Anxiety later from your browser menu.";
-        installedMessage.hidden = false;
+        showInstalled();
       }
     } catch (error) {
-      hideInstallOptions();
+      showNotInstalled();
     }
   });
 
-  window.addEventListener("appinstalled", function () {
-    showInstalled();
-  });
+  window.addEventListener("appinstalled", showInstalled);
 })();
