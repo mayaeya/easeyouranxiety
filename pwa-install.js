@@ -15,7 +15,7 @@
   const checkIcon = '<path d="m5 12 4 4L19 6"></path>';
   const ua = navigator.userAgent || "";
   const isChrome = ua.indexOf("Chrome/") !== -1 &&
-    !/(EdgA|EdgiOS|Edg|OPR|SamsungBrowser|Brave|Vivaldi)/i.test(ua);
+    !/(Ecosia|EdgA|EdgiOS|Edg|OPR|SamsungBrowser|Brave|Vivaldi)/i.test(ua);
   const isIOS = /iPad|iPhone|iPod/i.test(ua) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   const isSafariIOS = isIOS && /Safari/i.test(ua) &&
