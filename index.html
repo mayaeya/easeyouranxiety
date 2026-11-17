@@ -204,7 +204,9 @@
 
 .eya-logo {
   width: 110px;
-  max-width: 90%;
+  height: 110px;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 12px;
   opacity: 0.95;
   border: 1px solid #d36c94; /* raspberry pink border */
@@ -216,8 +218,149 @@
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+.install-action-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
+.install-action-row > a {
+  display: flex;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+}
+
+.install-action-row > a .eya-logo {
+  max-width: 100%;
+}
+
+.home-install-tile {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+  padding: 7px 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #eee8f6;
+  color: #4e3d7a;
+  border: 1px solid #d36c94;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  font: bold 13px/1.2 Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-install-tile svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.home-install-label {
+  font: bold 13px/1.1 Arial, sans-serif;
+}
+
+.home-install-description {
+  font: 10px/1.15 Arial, sans-serif;
+}
+.home-install-tile:hover {
+  background: #e4dbf0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-install-tile:focus-visible {
+  outline: 3px solid #5a2a6b;
+  outline-offset: 2px;
+}
+
+.home-install-tile[hidden],
+[data-pwa-caption][hidden],
+[data-pwa-ios-instructions][hidden],
+[data-pwa-installed-message][hidden] {
+  display: none !important;
+}
+
+[data-pwa-caption],
+[data-pwa-ios-instructions],
+[data-pwa-installed-message] {
+  max-width: min(440px, calc(100% - 24px));
+  margin: 8px auto 0;
+  color: #5a2a6b;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+[data-pwa-ios-instructions],
+[data-pwa-installed-message] {
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .install-action-row {
+    gap: 8px;
+  }
+
+  [data-pwa-caption],
+  [data-pwa-ios-instructions],
+  [data-pwa-installed-message] {
+    max-width: calc(100% - 20px);
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 260px) {
+  .install-action-row {
+    gap: 6px;
+  }
+
+  .install-action-row > a {
+    flex-basis: 94px;
+    width: 94px;
+    height: 94px;
+  }
+
+  .eya-logo {
+    width: 94px;
+  }
+
+  .home-install-tile {
+    flex-basis: 94px;
+    width: 94px;
+    height: 94px;
+    gap: 6px;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .home-install-tile svg {
+    width: 24px;
+    height: 24px;
+  }
+}
   </style>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ease Your Anxiety" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#000080" />
 </head>
 <body>
 
@@ -233,9 +376,20 @@
  <!-- Header -->
 <header>
   <div class="logo-container">
-    <a href="articles/Why-Maya-World.html">
-      <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
-    </a>
+    <div class="install-action-row" role="group" aria-label="About and app installation">
+      <a href="articles/Why-Maya-World.html">
+        <img src="images/eya-logo.png" alt="EYA Logo" class="eya-logo" />
+      </a>
+      <button class="home-install-tile" type="button" data-pwa-install aria-describedby="pwa-install-caption">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v11"></path>
+          <path d="m7.5 9.5 4.5 4.5 4.5-4.5"></path>
+          <path d="M5 17v3h14v-3"></path>
+        </svg>
+        <span class="home-install-label">Get the App</span>
+        <span class="home-install-description" id="pwa-install-caption">Install our free app for easier access.</span>
+      </button>
+    </div>
   </div>
 </header>
 </style>
@@ -307,6 +461,8 @@
 <span>© 2023–<span id="year"></span> Ease Your Anxiety. All rights reserved.</span>
     </div>
   </footer>
+
+  <script src="/pwa-install.js" defer></script>
 
   <script>
   document.getElementById("year").textContent = new Date().getFullYear();
