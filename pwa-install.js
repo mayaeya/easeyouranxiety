@@ -54,13 +54,13 @@
 
     if (isIOS) {
       installDescription.textContent =
-        "Tap Share → Add to Home Screen. If unavailable here, open the site in Safari.";
+        "Tap Share → Add to Home Screen. If unavailable, try Safari; the website still works here.";
     } else if (isAndroid) {
       installDescription.textContent =
-        "Check the menu for Install app or Add to Home Screen. If neither appears, installation may be unavailable here.";
+        "Check for Install app or Add to Home Screen in the menu. If neither appears, installation may be unavailable here; the website still works.";
     } else {
       installDescription.textContent =
-        "Check the browser menu or address bar for an Install option. If none appears, installation may be unavailable here.";
+        "Check the browser menu or address bar for Install. If none appears, installation may be unavailable here; the website still works.";
     }
 
     installDescription.style.fontSize = "9px";
