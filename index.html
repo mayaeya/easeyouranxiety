@@ -224,8 +224,12 @@
 }
 
 .install-action-row > a {
-  display: block;
-  flex: 0 0 auto;
+  display: flex;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-install-tile {
@@ -310,6 +314,12 @@
 @media (max-width: 260px) {
   .install-action-row {
     gap: 6px;
+  }
+
+  .install-action-row > a {
+    flex-basis: 94px;
+    width: 94px;
+    height: 94px;
   }
 
   .eya-logo {
