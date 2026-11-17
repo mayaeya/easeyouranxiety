@@ -14,6 +14,8 @@
   const downloadIcon = installIcon.innerHTML;
   const checkIcon = '<path d="m5 12 4 4L19 6"></path>';
   const ua = navigator.userAgent || "";
+  const isChrome = /Chrome\\/\\d+/i.test(ua) &&
+    !/(EdgA|EdgiOS|Edg\\/|OPR|SamsungBrowser|Brave|Vivaldi)/i.test(ua);
   const isIOS = /iPad|iPhone|iPod/i.test(ua) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   const isSafariIOS = isIOS && /Safari/i.test(ua) &&
@@ -79,20 +81,19 @@
   window.addEventListener("beforeinstallprompt", function (event) {
     event.preventDefault();
     deferredPrompt = event;
+    if (installButton.dataset.installState === "browser-menu") {
+      showNotInstalled();
+    }
   });
 
   installButton.addEventListener("click", async function () {
     if (!deferredPrompt) {
       installLabel.textContent = "Install from browser menu";
-      installDescription.textContent =
-        "Use your browser menu to install this app.";
+      installDescription.textContent = isChrome
+        ? "Open Chrome's ⋮ menu, then choose Install app."
+        : "Open your browser's menu and choose Install or Add to Home Screen.";
       installDescription.style.fontSize = "9px";
       installButton.dataset.installState = "browser-menu";
-      window.setTimeout(function () {
-        if (installButton.dataset.installState === "browser-menu") {
-          showNotInstalled();
-        }
-      }, 4000);
       return;
     }
 
