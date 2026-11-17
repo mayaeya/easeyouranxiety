@@ -91,7 +91,7 @@
       installLabel.textContent = "Install from browser menu";
       installDescription.textContent = isChrome
         ? "Open Chrome's ⋮ menu, then choose Install app."
-        : "Open your browser's menu and choose Install or Add to Home Screen.";
+        : "This browser may not support app installation. On Android, open this website in Chrome to install it.";
       installDescription.style.fontSize = "9px";
       installButton.dataset.installState = "browser-menu";
       return;
