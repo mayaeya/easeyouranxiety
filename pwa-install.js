@@ -1,9 +1,8 @@
 (function () {
   const installButton = document.querySelector("[data-pwa-install]");
-  const caption = document.querySelector("[data-pwa-caption]");
   const iosInstructions = document.querySelector("[data-pwa-ios-instructions]");
   const installedMessage = document.querySelector("[data-pwa-installed-message]");
-  if (!installButton || !caption || !iosInstructions || !installedMessage) return;
+  if (!installButton || !iosInstructions || !installedMessage) return;
 
   const ua = navigator.userAgent || "";
   const isIOS = /iPad|iPhone|iPod/i.test(ua) ||
@@ -17,20 +16,17 @@
 
   function hideInstallOptions() {
     installButton.hidden = true;
-    caption.hidden = true;
     iosInstructions.hidden = true;
     installedMessage.hidden = true;
   }
 
   function showInstallOptions() {
     installButton.hidden = false;
-    caption.hidden = false;
     installedMessage.hidden = true;
   }
 
   function showInstalled(message) {
     installButton.hidden = true;
-    caption.hidden = true;
     iosInstructions.hidden = true;
     installedMessage.textContent = message ||
       "Ease Your Anxiety is installed. Open it from your Home Screen.";
@@ -74,7 +70,6 @@
         showInstalled("Ease Your Anxiety is being installed.");
       } else {
         installButton.hidden = true;
-        caption.hidden = true;
         installedMessage.textContent =
           "You can install Ease Your Anxiety later from your browser menu.";
         installedMessage.hidden = false;
