@@ -31,6 +31,7 @@
     installDescription.textContent = defaultDescription;
     installDescription.style.fontSize = "";
     installButton.dataset.installState = "not-installed";
+    installButton.removeAttribute("aria-label");
   }
 
   function showInstalled() {
